@@ -1,20 +1,18 @@
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 import util.MyDriverManager;
-
-import java.time.Duration;
 
 public abstract class BaseTest {
     protected WebDriver driver = MyDriverManager.getDriver();
-    @BeforeMethod
+
+    @BeforeSuite
     public void setUp() {
         driver.get("https://edc.sale/ru/by/");
     }
 
-//    @AfterSuite
-//    public  void closeDriver() {
-//        driver.quit();
-//    }
+    @AfterSuite
+    public void closeDriver() {
+        driver.quit();
+    }
 }
