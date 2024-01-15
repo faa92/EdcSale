@@ -1,8 +1,6 @@
 package pages;
 
-import data.Categories;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class BulletinBoard extends BasePage {
@@ -46,9 +44,11 @@ public class BulletinBoard extends BasePage {
     public WebElement getRealEstateButton() {
         return driver.findElement(realEstateButton);
     }
-    public WebElement getСhildsWorldButton() {
+
+    public WebElement getChildsWorldButton() {
         return driver.findElement(сhildsWorldButton);
     }
+
     public WebElement getAnimalsButton() {
         return driver.findElement(animalsButton);
     }

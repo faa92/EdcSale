@@ -1,7 +1,7 @@
 package data;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.ArrayList;
+import java.util.List;
 
 public enum Categories {
 
@@ -29,20 +29,12 @@ public enum Categories {
         return displayName;
     }
 
-    public static Map<String, String> getAllCategories() {
-        return new HashMap<>() {{
-            put(REAL_ESTATE.toString(), REAL_ESTATE.displayName);
-            put(CHILDS_WORLD.toString(), CHILDS_WORLD.displayName);
-            put(ANIMALS.toString(), ANIMALS.displayName);
-            put(PERSONAL_ITEMS.toString(), PERSONAL_ITEMS.displayName);
-            put(BUSINESS.toString(), BUSINESS.displayName);
-            put(SPORTS_AND_TRAVEL.toString(), SPORTS_AND_TRAVEL.displayName);
-            put(TRANSPORT.toString(), TRANSPORT.displayName);
-            put(ELECTRONICS.toString(), ELECTRONICS.displayName);
-            put(HOUSE_AND_COTTAGE.toString(), HOUSE_AND_COTTAGE.displayName);
-            put(SERVICES.toString(), SERVICES.displayName);
-            put(JOB.toString(), JOB.displayName);
-            put(HOBBY_MUSIC_ART.toString(), HOBBY_MUSIC_ART.displayName);
-        }};
+    public static List<String> getExpectedValues() {
+        List<String> values = new ArrayList<>();
+        for (Categories categories : Categories.values()) {
+            values.add(categories.displayName);
+        }
+        return values;
     }
+
 }

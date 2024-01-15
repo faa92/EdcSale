@@ -15,4 +15,9 @@ public class SearchHeaderTest extends  BaseTest {
         Assert.assertTrue(searchHeaderService.isDisplayedAllCategories(), "Not all categories are displayed!");
     }
 
+    @Test
+    public void checkingSearchByUrl() {
+        Assert.assertNotEquals(driver.getCurrentUrl(), searchHeaderService.urlAfterSearch());
+    }
+
 }

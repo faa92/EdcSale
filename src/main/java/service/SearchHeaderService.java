@@ -1,16 +1,31 @@
 package service;
 
+import data.Categories;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import pages.SearchHeader;
-import data.Categories;
 
 
 public class SearchHeaderService extends BaseService {
     private final SearchHeader searchHeader;
+
     public SearchHeaderService() {
         super(SearchHeaderService.class);
         this.searchHeader = new SearchHeader();
+    }
+
+
+    public String urlAfterSearch() {
+        try {
+            if (searchHeader.getSearchField().isDisplayed() && searchHeader.getSearchButton().isDisplayed()) {
+                searchHeader.getSearchField().click();
+                searchHeader.getSearchField().sendKeys(Categories.JOB.toString());
+                searchHeader.getSearchButton().click();
+            } else logger.info("Search failed!");
+        } catch (Exception e) {
+            logger.info("Search failed!");
+        }
+        return driver.getCurrentUrl();
     }
 
     public boolean isWorkTheSearchField() {
@@ -42,7 +57,7 @@ public class SearchHeaderService extends BaseService {
                     WebElement categoryElement = searchHeader
                             .getDropDownMenu()
                             .findElement(By.xpath(
-                                    "//span[contains(text(), '" + category + "')]"));
+                                    "//span[contains(text(), '" + category + "')]"));  //todo
                     logger.info("Category " + category + " displayed");
 
                     if (!categoryElement.isDisplayed()) {
