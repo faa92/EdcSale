@@ -15,9 +15,7 @@ public class BulletinBoardTest extends BaseTest {
     }
 
     @Test
-    public void expectedCategoriesHashMap() {
-        bulletinBoardService.actualResult();
-        Categories.getAllCategories();
-
+    public void expectedCategoriesList() {
+        Assert.assertEquals(bulletinBoardService.getActualValues(), Categories.getExpectedValues());
     }
 }
