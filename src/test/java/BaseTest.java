@@ -1,5 +1,4 @@
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import util.MyDriverManager;
 
@@ -11,8 +10,8 @@ public abstract class BaseTest {
         driver.get("https://edc.sale/ru/by/");
     }
 
-    @AfterSuite
-    public void closeDriver() {
-        driver.quit();
-    }
+//    @AfterSuite
+//    public void closeDriver() {
+//        driver.quit();
+//    }
 }

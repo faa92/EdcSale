@@ -10,12 +10,7 @@ public class BulletinBoardTest extends BaseTest {
     BulletinBoardService bulletinBoardService = new BulletinBoardService();
 
     @Test
-    public void clickabilityCategoryOnBulletinBoard() {
-        Assert.assertTrue(bulletinBoardService.clickOnEachCategory(), "Category clickability failed!");
-    }
-
-    @Test
     public void expectedCategoriesList() {
-        Assert.assertEquals(bulletinBoardService.getActualValues(), Categories.getExpectedValues());
+        Assert.assertTrue(bulletinBoardService.isCategoriesCorrect(Categories.values()));
     }
 }

@@ -1,7 +1,10 @@
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import service.SearchHeaderService;
+import util.MyTestListener;
 
+@Listeners(MyTestListener.class)
 public class SearchHeaderTest extends  BaseTest {
     SearchHeaderService searchHeaderService = new SearchHeaderService();
 

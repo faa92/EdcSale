@@ -10,7 +10,6 @@ public class SearchHeaderService extends BaseService {
     private final SearchHeader searchHeader;
 
     public SearchHeaderService() {
-        super(SearchHeaderService.class);
         this.searchHeader = new SearchHeader();
     }
 

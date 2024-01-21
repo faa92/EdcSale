@@ -1,22 +1,23 @@
 package data;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public enum Categories {
 
     REAL_ESTATE("Недвижимость"),
+    TRANSPORT("Транспорт"),
     CHILDS_WORLD("Детский мир"),
+    ELECTRONICS("Электроника"),
     ANIMALS("Животные"),
+    HOUSE_AND_COTTAGE("Дом и дача"),
     PERSONAL_ITEMS("Личные вещи"),
+    SERVICES("Услуги"),
     BUSINESS("Бизнес"),
     SPORTS_AND_TRAVEL("Спорт и путешествия"),
-    TRANSPORT("Транспорт"),
-    ELECTRONICS("Электроника"),
-    HOUSE_AND_COTTAGE("Дом и дача"),
-    SERVICES("Услуги"),
     JOB("Работа"),
     HOBBY_MUSIC_ART("Хобби, музыка, искусство");
+
+    public String getDisplayName() {
+        return displayName;
+    }
 
     private String displayName;
 
@@ -29,12 +30,5 @@ public enum Categories {
         return displayName;
     }
 
-    public static List<String> getExpectedValues() {
-        List<String> values = new ArrayList<>();
-        for (Categories categories : Categories.values()) {
-            values.add(categories.displayName);
-        }
-        return values;
-    }
 
 }
