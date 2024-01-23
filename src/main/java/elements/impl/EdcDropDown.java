@@ -34,8 +34,7 @@ public class EdcDropDown extends PageBlock implements IDropDown {
         expand();
         driver.findElements(dropDownElements).stream().filter(
                         element -> element
-                                .getText()
-                                .equals(value))
+                                .getText().equals(value))
                 .findFirst().orElseThrow(() -> new RuntimeException("Not found value: " + value)).click();
 
     }

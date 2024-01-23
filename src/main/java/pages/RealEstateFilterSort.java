@@ -1,56 +1,23 @@
 package pages;
 
+import elements.impl.CheckBox;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-public class RealEstateFilterSort extends BasePage {
+import java.util.List;
 
-    private final By categoryDropDown = By.id("j-f-cat-desktop-link");
 
-    public WebElement getCategoryDropDown() {
-        return driver.findElement(categoryDropDown);
-    }
-
+public class RealEstateFilterSort extends BasePage {//todo
+    private final By buttonCategory = By.xpath("//div[@class='fl-search-h-cat-box']");
     private final By filterByPrice = By.xpath("//div[@class='fl-aside-filter-item-head collapsed']");
-    private final By dropMenuPriceFrom = By.xpath("//input[contains(@placeholder,'от')]");
-    private final By dropMenuPriceUpTo = By.xpath("//input[contains(@placeholder,'по')]");
-    private final By dropMenuCurrencySelection = By.xpath("//div[@class='form-control ml-2 j-curr-select']");
-    private final By buttonFilterApply = By.xpath("//button[contains(text(),'Фильтр')]");
+    private final By filtersCheckBoxes = By.xpath("//div[@class='fl-search-dynamics-check j-seek']");
 
-    private final By filterWithPhoto = By.xpath("//span[contains(text(),'С фото')]");
-    private final By filterWithoutIntermediaries = By.xpath("//span[contains(text(),'Без посредников')]");
-    private final By filterBusinessAdsOnly = By.xpath("//span[contains(text(),'Только бизнес объявления')]");
-
-
-    public WebElement getDropMenuPriceFrom() {
-        return driver.findElement(dropMenuPriceFrom);
+    public CheckBox getFilterByPrice() {
+        return new CheckBox(driver.findElement(filterByPrice));
     }
 
-    public WebElement getDropMenuPriceUpTo() {
-        return driver.findElement(dropMenuPriceUpTo);
+    public List<WebElement> getFiltersCheckBoxes() {
+        return driver.findElements(filtersCheckBoxes).stream().toList();
     }
 
-    public WebElement getDropMenuCurrencySelection() {
-        return driver.findElement(dropMenuCurrencySelection);
-    }
-
-    public WebElement getButtonFilterApply() {
-        return driver.findElement(buttonFilterApply);
-    }
-
-    public WebElement getFilterByPrice() {
-        return driver.findElement(filterByPrice);
-    }
-
-    public WebElement getFilterWithPhoto() {
-        return driver.findElement(filterWithPhoto);
-    }
-
-    public WebElement getFilterWithoutIntermediaries() {
-        return driver.findElement(filterWithoutIntermediaries);
-    }
-
-    public WebElement getFilterBusinessAdsOnly() {
-        return driver.findElement(filterBusinessAdsOnly);
-    }
 }

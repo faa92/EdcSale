@@ -23,27 +23,6 @@ public class MyTestListener implements ITestListener {
             driver.quit();
         }
     }
-//
-//        @Override
-//        public void beforeStepStop(final StepResult result) {
-//
-//            if(result.getStatus().equals(Status.FAILED) || result.getStatus().equals(Status.BROKEN)) {
-//                screenshot();
-//                result.setStatus(Status.FAILED);
-//            }
-//
-//        }
-//
-//        @Attachment(value = "Screenshot", type = "image/png")
-//        public byte[] screenshot() {
-//            WebDriver driver = MyDriverManager.getDriver();
-//            if (driver instanceof TakesScreenshot) {
-//                return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-//            } else {
-//                // Обработка случая, если веб-драйвер не поддерживает снятие скриншотов
-//                logger.info("Browser is not capable of taking screenshots");
-//                return new byte[0]; // Возвращает пустой массив байтов
-//            }
-//        }
+
 }
 

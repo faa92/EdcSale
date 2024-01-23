@@ -10,6 +10,10 @@ public class EdcLink implements ILink {
         this.element = element;
     }
 
+    public boolean isDisplayed() {
+        return element.isDisplayed();
+    }
+
     @Override
     public String getText() {
         return element.getText();
