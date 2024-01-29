@@ -49,8 +49,11 @@ public class RealEstateService extends BaseService {
     public void filterByPrice(int priceFrom, int priceTo, Currency currency) {
         logger.info("Enter value by price filter");
         clickTheFilterPrice();
+        logger.info("Enter price from: " + priceFrom + " Enter price to: " + priceTo);
         enterValuesForTheFilter(priceFrom, priceTo);
+        logger.info("Set currency: " + currency);
         setCurrency(currency);
+        logger.info("Filter apply");
         applyFilter();
     }
 

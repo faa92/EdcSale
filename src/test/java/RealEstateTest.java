@@ -17,13 +17,13 @@ public class RealEstateTest extends BaseTest {
     public void checkingBusinessCheckbox() {
         boardService.selectMainCategory(Categories.REAL_ESTATE);
         realEstateService.selectFilter(FiltersSearchPanel.WITH_PHOTO);
-        Assert.assertTrue(realEstateService.isPhotoChecked());      //todo
+        Assert.assertTrue(realEstateService.isPhotoChecked());       //todo
     }
 
-    @Test(description = "Проверка фильтра по цене в разделе «Недвижимость»") //todo
+    @Test(description = "Проверка фильтра по цене в разделе «Недвижимость»")  //todo
     public void checkingTheFilterByPriceInTheRealEstateSection() {
         boardService.selectMainCategory(Categories.REAL_ESTATE);
-        realEstateService.filterByPrice(1000, 2000, Currency.BYN);
+        realEstateService.filterByPrice(1000, 2000, Currency.MDL);
     }
 
 

@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3529428e-2f45-4ab0-bfe8-cdda7fc256ae" name="Changes" comment="fix">
-      <change afterPath="$PROJECT_DIR$/src/main/java/data/MyDataProvider.java" afterDir="false" />
+    <list default="true" id="3529428e-2f45-4ab0-bfe8-cdda7fc256ae" name="Changes" comment="add DataProvider">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data/FiltersSearchPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/FiltersSearchPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/BelarusAdsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/BelarusAdsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/BulletinBoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/BulletinBoardService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/Currency.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/Currency.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/realEstate/elements/BlockPriceFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/realEstate/elements/BlockPriceFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/service/RealEstateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/RealEstateService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/BulletinBoardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BulletinBoardTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/RealEstateTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/RealEstateTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -106,31 +103,7 @@
       <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.BulletinBoardTest.data">
-    <configuration name="BulletinBoardTest.checkingTheAllCategoriesDropdownMenu" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;BulletinBoardTest.checkingTheAllCategoriesDropdownMenu&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>true</ForceTestExec>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Gradle.RealEstateTest.checkingTheFilterByPriceInTheRealEstateSection">
     <configuration name="BulletinBoardTest.checkingTheDropDownListOfAdsInTheSearchBar" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -227,20 +200,44 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
+    <configuration name="RealEstateTest.qdwqd" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;RealEstateTest.qdwqd&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>true</ForceTestExec>
+      <method v="2" />
+    </configuration>
     <list>
-      <item itemvalue="Gradle.BulletinBoardTest.checkingTheAllCategoriesDropdownMenu" />
       <item itemvalue="Gradle.BulletinBoardTest.checkingTheDropDownListOfAdsInTheSearchBar" />
       <item itemvalue="Gradle.BulletinBoardTest.data" />
       <item itemvalue="Gradle.RealEstateTest.checkingBusinessCheckbox" />
       <item itemvalue="Gradle.RealEstateTest.checkingTheFilterByPriceInTheRealEstateSection" />
+      <item itemvalue="Gradle.RealEstateTest.qdwqd" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.RealEstateTest.checkingTheFilterByPriceInTheRealEstateSection" />
+        <item itemvalue="Gradle.RealEstateTest.qdwqd" />
         <item itemvalue="Gradle.BulletinBoardTest.data" />
         <item itemvalue="Gradle.RealEstateTest.checkingBusinessCheckbox" />
-        <item itemvalue="Gradle.RealEstateTest.checkingTheFilterByPriceInTheRealEstateSection" />
         <item itemvalue="Gradle.BulletinBoardTest.checkingTheDropDownListOfAdsInTheSearchBar" />
-        <item itemvalue="Gradle.BulletinBoardTest.checkingTheAllCategoriesDropdownMenu" />
       </list>
     </recent_temporary>
   </component>
@@ -253,7 +250,7 @@
       <option name="presentableId" value="Default" />
       <updated>1704288320706</updated>
       <workItem from="1704288321753" duration="148332000" />
-      <workItem from="1705863364676" duration="126309000" />
+      <workItem from="1705863364676" duration="132659000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -319,7 +316,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706542206909</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="add DataProvider">
+      <option name="closed" value="true" />
+      <created>1706562005631</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1706562005631</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -356,7 +361,8 @@
     <MESSAGE value="add check by url test" />
     <MESSAGE value="2 test cases made" />
     <MESSAGE value="fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix" />
+    <MESSAGE value="add DataProvider" />
+    <option name="LAST_COMMIT_MESSAGE" value="add DataProvider" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -375,11 +381,6 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="94" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/RealEstateTest.java</url>
-          <line>18</line>
-          <option name="timeStamp" value="95" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

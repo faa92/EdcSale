@@ -5,8 +5,8 @@ import elements.IDropDown;
 import elements.PageBlock;
 import elements.impl.EdcButton;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 
 public class BlockPriceFilter extends PageBlock implements IDropDown {
     private final By inputsPriceFilter = By.xpath(".//div[@class='fl-dyn-dropdown j-search-items-box']"); //общее меню фильтра
@@ -14,16 +14,16 @@ public class BlockPriceFilter extends PageBlock implements IDropDown {
     private final By priceTo = By.xpath(".//input[@class='form-control ml-2 j-to']");
     private final By elementsCurrencySelection = By.xpath(".//select[@class='form-control ml-2 j-curr-select']");  //выбор валюты /алерт?
     private final By buttonApply = By.xpath(".//button[@class='btn btn-success j-submit']");
-    private final By inputCurrency = By.xpath(".//input[@class='j-curr']");
 
     public BlockPriceFilter(WebElement element) {
         super(element);
     }
 
-    public void setCurrencySelection(Currency currency) {            //todo // ищет правильно но не отображает в фильтре выбранную валюту
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        String newValue = currency.toString();
-        js.executeScript("arguments[0].setAttribute('value', arguments[1])", driver.findElement(inputCurrency), newValue);
+    public void setCurrencySelection(Currency currency) {
+        WebElement selectCurrency = driver.findElement(elementsCurrencySelection);
+        Select select = new Select(selectCurrency);
+        select.selectByValue(currency.getCurrencyValue());
+
     }
 
     public void enterPriceFrom(Integer priceFrom) {
