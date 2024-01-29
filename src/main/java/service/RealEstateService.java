@@ -12,6 +12,7 @@ public class RealEstateService extends BaseService {
     }
 
     public void selectFilter(FiltersSearchPanel filters) {
+        logger.info(" select filter search panel");
         switch (filters) {
             case WITH_PHOTO -> realEstatePage.getSearchPanel().getPhotoCheckBox().clickCheckBox();
 
@@ -24,6 +25,7 @@ public class RealEstateService extends BaseService {
 
 
     public boolean isPhotoChecked() {
+        logger.info("filter selection check");
         return realEstatePage.getSearchPanel().getPhotoCheckBox().isSelectedFilter();
     }
 

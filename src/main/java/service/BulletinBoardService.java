@@ -16,6 +16,7 @@ public class BulletinBoardService extends BaseService {
     }
 
     public void selectMainCategory(Categories category) {
+        logger.info("select category");
         logger.info("Category " + category + " click");
         board.getMainBlock()
                 .getListCategoriesMainBlock()
@@ -27,6 +28,7 @@ public class BulletinBoardService extends BaseService {
     }
 
     public boolean isCategoriesCorrect(Categories[] expectedValues) {
+        logger.info("checking the main categories in the drop-down menu");
         List<String> listValues = board.getSearchPanel()
                 .getDropDownMenuMainCategories()
                 .getListCategories()
@@ -47,6 +49,7 @@ public class BulletinBoardService extends BaseService {
     }
 
     public boolean isPresentMenu() {
+        logger.info("is the dropdown menu open?");
         if (board.getSearchPanel().getDropDownMenuMainCategories().isExpanded()) {
             return board.getSearchPanel().getDropDownMenuMainCategories().isDisplayed();
         }
@@ -54,6 +57,7 @@ public class BulletinBoardService extends BaseService {
     }
 
     public boolean isCorrectLoadedAllElementsMenu() {
+        logger.info("Are all menu items loading correctly?");
         return board.getSearchPanel().getDropDownMenuMainCategories().getHeaderAllAds().isDisplayed()
                 && board.getSearchPanel().getDropDownMenuMainCategories().getAdCounter().isDisplayed()
                 && board.getSearchPanel().getDropDownMenuMainCategories().getSeeAllAds().isDisplayed()
@@ -61,19 +65,23 @@ public class BulletinBoardService extends BaseService {
     }
 
     public void enterRequest(String value) {
+        logger.info("enter a query into the search bar");
         board.getSearchPanel().getSearchField().sendText(value);
     }
 
     public boolean waitDisplayedAdsBlock() {
+        logger.info("waiting for ad dropdown list");
         return wait.until((driver) -> board.getDropDownListAds().isDisplayed());
     }
 
 
     public int countAds() {
+        logger.info("getting the ad list size");
         return board.getDropDownListAds().getListAds().size();
     }
 
     public boolean isMatchesTheRequest(String value) {
+        logger.info("correspondence between the request and the list of advertisements");
         return board.getDropDownListAds()
                 .getListAds()
                 .stream()
@@ -81,6 +89,7 @@ public class BulletinBoardService extends BaseService {
     }
 
     public void clickTheSearchButton() {
+        logger.info("click the search button");
         board.getSearchPanel().getButtonSubmit().clickButton();
     }
 
