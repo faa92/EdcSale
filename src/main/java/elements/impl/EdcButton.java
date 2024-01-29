@@ -4,15 +4,13 @@ import elements.IButton;
 import elements.PageBlock;
 import org.openqa.selenium.WebElement;
 
-public class ButtonSubmit extends PageBlock implements IButton {
-    private final WebElement element;
-
-    public ButtonSubmit(WebElement element) {
-        this.element = element;
+public class EdcButton extends PageBlock implements IButton {
+    public EdcButton(WebElement element) {
+        super(element);
     }
 
     @Override
-    public String getTitle() {
+    public String getText() {
         return element.getText();
     }
 

@@ -1,32 +1,56 @@
 package service;
 
-import pages.RealEstateFilterSort;
-import pages.RealEstatePage;
+import data.Currency;
+import data.FiltersSearchPanel;
+import pages.realEstate.RealEstatePage;
 
 public class RealEstateService extends BaseService {
     private final RealEstatePage realEstatePage;
-    private final RealEstateFilterSort realEstateFilterSort;
 
     public RealEstateService() {
         this.realEstatePage = new RealEstatePage();
-        this.realEstateFilterSort = new RealEstateFilterSort();
-
-
     }
 
-//    public boolean isLoadedCorrectSearchContainer() {
-//        logger.info("is Loaded Correct search container");
-//        return realEstateFilterSort.getFilterWithoutIntermediaries().isDisplayedCheckBox()
-//                && realEstateFilterSort.getFilterWithPhoto().isDisplayedCheckBox()
-//                && realEstateFilterSort.getFilterByPrice().isDisplayedCheckBox()
-//                && realEstateFilterSort.getFilterBusinessAdsOnly().isDisplayedCheckBox()
-//                && realEstateFilterSort.getButtonDropDownMainCategories().isDisplayedButton()
-//                && realEstateFilterSort.getFilterWithoutIntermediaries().isDisplayedCheckBox();
-//    }
-//
-//    public boolean isDisplayedElementsDropDownMenu() {
-//        logger.info("Is loaded correct drop down menu main categories");
-//        realEstateFilterSort.getButtonDropDownMainCategories().clickButton();
-//        return realEstateFilterSort.getBlockMainCategories().isCorrectLoadedElementsDropDownMenu();
-//    }
+    public void selectFilter(FiltersSearchPanel filters) {
+        switch (filters) {
+            case WITH_PHOTO -> realEstatePage.getSearchPanel().getPhotoCheckBox().clickCheckBox();
+
+            case WITHOUT_INTERMEDIARIES ->
+                    realEstatePage.getSearchPanel().getWithOutIntermediariesCheckBox().clickCheckBox();
+
+            case BUSINESS_ADS_ONLY -> realEstatePage.getSearchPanel().getBusinessAdsOnlyCheckBox().clickCheckBox();
+        }
+    }
+
+
+    public boolean isPhotoChecked() {
+        return realEstatePage.getSearchPanel().getPhotoCheckBox().isSelectedFilter();
+    }
+
+    private void clickTheFilterPrice() {
+        realEstatePage.getSearchPanel().getBlockPriceFilter().expand();
+    }
+
+    private void enterValuesForTheFilter(int priceFrom, int priceTo) {
+        realEstatePage.getSearchPanel().getBlockPriceFilter().enterPriceFrom(priceFrom);
+        realEstatePage.getSearchPanel().getBlockPriceFilter().enterPriceTo(priceTo);
+    }
+
+    private void setCurrency(Currency currency) {
+        realEstatePage.getSearchPanel().getBlockPriceFilter().setCurrencySelection(currency);
+    }
+
+    private void applyFilter() {
+        realEstatePage.getSearchPanel().getBlockPriceFilter().getButtonApply().clickButton();
+    }
+
+    public void filterByPrice(int priceFrom, int priceTo, Currency currency) {
+        logger.info("Enter value by price filter");
+        clickTheFilterPrice();
+        enterValuesForTheFilter(priceFrom, priceTo);
+        setCurrency(currency);
+        applyFilter();
+    }
+
+
 }

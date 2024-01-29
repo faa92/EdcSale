@@ -1,23 +1,22 @@
-package elements.impl;
+package pages.bulletinBoard.elements;
 
 import elements.IDropDown;
 import elements.PageBlock;
+import elements.impl.EdcLink;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
 public class BlockDropDownMainCategories extends PageBlock implements IDropDown {
-
-    private final By listCategories = By.xpath(".//ul[@class='fl-search-cats-list-in']");
+    private final By dropDownMenu = By.xpath("//div[@class='fl-search-cats-dropdown j-mobile-filter-first-step']");
+    private final By listCategories = By.xpath(".//li[@class='fl-search-cats-item']");
     private final By headerAllAds = By.xpath(".//div[@class='fl-search-dropdown-title wb-f-panel-title']");
     private final By adCounter = By.xpath(".//span[@class='c-number-spaced mr-1']");
     private final By seeAllAds = By.xpath(".//span[@class='d-none d-md-inline-block']");
 
-    private final WebElement element;
-
     public BlockDropDownMainCategories(WebElement element) {
-        this.element = element;
+        super(element);
     }
 
     public EdcLink getSeeAllAds() {
@@ -39,7 +38,7 @@ public class BlockDropDownMainCategories extends PageBlock implements IDropDown 
     }
 
 
-    public boolean isDisplayedMenu() {
+    public boolean isDisplayed() {
         return element.isDisplayed();
     }
 
@@ -57,7 +56,7 @@ public class BlockDropDownMainCategories extends PageBlock implements IDropDown 
     @Override
     public void selectValue(String value) {
         expand();
-        driver.findElements(listCategories)
+        driver.findElements(dropDownMenu)
                 .stream()
                 .filter(element -> element.getText().equals(value))
                 .findFirst()
@@ -67,6 +66,6 @@ public class BlockDropDownMainCategories extends PageBlock implements IDropDown 
 
     @Override
     public boolean isExpanded() {
-        return element.getAttribute("style").contains("display: block;");
+        return driver.findElement(dropDownMenu).getAttribute("style").contains("display: block;");
     } //display: none; если меню свёрнуто
 }

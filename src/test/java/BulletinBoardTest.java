@@ -9,26 +9,30 @@ import util.MyTestListener;
 public class BulletinBoardTest extends BaseTest {
     BulletinBoardService bulletinBoardService = new BulletinBoardService();
 
-    @Test
+    @Test(description = "Проверка перечня категорий на домашней странице")
     public void expectedCategoriesList() {
+        bulletinBoardService.extendDropdownMenuAllCategories();
         Assert.assertTrue(bulletinBoardService.isCategoriesCorrect(Categories.values()));
     }
 
-    @Test
+    @Test(description = "Проверка выпадающего меню  «Все категории»")
     public void checkingTheAllCategoriesDropdownMenu() {
         bulletinBoardService.extendDropdownMenuAllCategories();
         Assert.assertTrue(bulletinBoardService.isPresentMenu());
         Assert.assertTrue(bulletinBoardService.isCorrectLoadedAllElementsMenu());
     }
 
-    @Test
+    @Test(description = "Проверка выпадающего списка объявлений в строке поиска после ввода запроса")
     public void checkingTheDropDownListOfAdsInTheSearchBar() {
         int expectedValue = 5;
-        bulletinBoardService.enterRequest();
-        Assert.assertTrue(bulletinBoardService.waitDisplayedAdsBlock(wait));
+        bulletinBoardService.enterRequest("Автомобиль BMW");
+        Assert.assertTrue(bulletinBoardService.waitDisplayedAdsBlock());
         Assert.assertEquals(bulletinBoardService.countAds(), expectedValue);
-        Assert.assertTrue(bulletinBoardService.isMatchesTheRequest());
+        Assert.assertTrue(bulletinBoardService.isMatchesTheRequest("BMW"));
     }
+
+
+
 
 
 }

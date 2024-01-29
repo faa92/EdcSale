@@ -1,7 +1,6 @@
 package elements;
 
-public interface IButton {
-    String getTitle();
+public interface IButton extends ILabel {
 
     void clickButton();
 

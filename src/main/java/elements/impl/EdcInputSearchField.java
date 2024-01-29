@@ -1,14 +1,13 @@
 package elements.impl;
 
 import elements.IInputSearchField;
-import elements.PageBlock;
+import elements.PageElement;
 import org.openqa.selenium.WebElement;
 
-public class InputSearchField extends PageBlock implements IInputSearchField {
-    private final WebElement element;
+public class EdcInputSearchField extends PageElement implements IInputSearchField {
 
-    public InputSearchField(WebElement element) {
-        this.element = element;
+    public EdcInputSearchField(WebElement element) {
+        super(element);
     }
 
     @Override

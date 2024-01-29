@@ -1,8 +1,6 @@
 package elements;
 
-public interface IDropDown {
-
-    String getText();
+public interface IDropDown extends ILabel {
 
     void expand();
 

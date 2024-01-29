@@ -1,14 +1,12 @@
 package elements;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import util.MyDriverManager;
 
-public abstract class PageBlock {
-    protected final WebDriver driver = MyDriverManager.getDriver();
+public abstract class PageElement {
+
     protected final WebElement element;
 
-    public PageBlock(WebElement element) {
+    public PageElement(WebElement element) {
         this.element = element;
     }
 

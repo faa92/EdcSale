@@ -4,28 +4,45 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3529428e-2f45-4ab0-bfe8-cdda7fc256ae" name="Changes" comment="add checkin by url test">
-      <change afterPath="$PROJECT_DIR$/src/main/java/elements/IDropDown.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/elements/Ilink.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/elements/PageBlock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/elements/impl/EdcDropDown.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/elements/impl/EdcLink.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pages/RealEstateFilterSort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pages/RealEstatePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/RealEstateService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/RealEstateTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="3529428e-2f45-4ab0-bfe8-cdda7fc256ae" name="Changes" comment="2 test cases made">
+      <change afterPath="$PROJECT_DIR$/src/main/java/data/Currency.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/data/DataProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/data/FiltersSearchPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/elements/ILabel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/elements/PageElement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/elements/impl/EdcCheckBox.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/elements/impl/EdcLabel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pages/BelarusAdsPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pages/bulletinBoard/elements/BulletinBordBlockSearchPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pages/bulletinBoard/elements/MainBlock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pages/realEstate/RealEstatePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/BelarusAdsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/BelarusAdsTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/data/Categories.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/Categories.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/BulletinBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/BulletinBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/elements/IButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/elements/IButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/elements/IDropDown.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/elements/IDropDown.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/elements/PageBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/elements/PageBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/elements/impl/BlockDropDownMainCategories.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/bulletinBoard/elements/BlockDropDownMainCategories.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/elements/impl/BlockListAds.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/bulletinBoard/elements/BlockListAds.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/elements/impl/BlockPriceFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/realEstate/elements/BlockPriceFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/elements/impl/BlockSearchPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/realEstate/elements/RealEstateBlockSearchPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/elements/impl/ButtonDropDownMainCategories.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/elements/impl/ButtonSubmit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/elements/impl/EdcButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/elements/impl/CheckBox.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/elements/impl/EdcDropDown.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/elements/impl/EdcDropDownRealEstateSortForPrice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/elements/impl/EdcLink.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/elements/impl/EdcLink.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/elements/impl/InputSearchField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/elements/impl/EdcInputSearchField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/BulletinBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/bulletinBoard/BulletinBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/RealEstateFilterSort.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/RealEstatePage.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/service/BaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/BaseService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/service/BulletinBoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/BulletinBoardService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/SearchHeaderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/SearchHeaderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/allure.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/allure.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/log4j2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/RealEstateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/RealEstateService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/BulletinBoardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BulletinBoardTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/SearchHeaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SearchHeaderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/RealEstateTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/RealEstateTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,24 +107,27 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.09398496&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.44&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_directory_selection": "/Users/antonfedoseev/IdeaProjects/EdcSale/src/main/java",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.09398496",
+    "project.structure.side.proportion": "0.44",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="pages.realEstate.elements" />
+      <recent name="elements" />
       <recent name="elements.impl" />
       <recent name="pages" />
     </key>
@@ -116,7 +136,55 @@
       <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.BulletinBoardTest.expectedCategoriesList">
+  <component name="RunManager" selected="Gradle.RealEstateTest.checkingBusinessCheckbox">
+    <configuration name="BulletinBoardTest.checkingTheAllCategoriesDropdownMenu" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;BulletinBoardTest.checkingTheAllCategoriesDropdownMenu&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>true</ForceTestExec>
+      <method v="2" />
+    </configuration>
+    <configuration name="BulletinBoardTest.checkingTheDropDownListOfAdsInTheSearchBar" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;BulletinBoardTest.checkingTheDropDownListOfAdsInTheSearchBar&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>true</ForceTestExec>
+      <method v="2" />
+    </configuration>
     <configuration name="BulletinBoardTest.expectedCategoriesList" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -141,29 +209,7 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="EdcSale [allureServe]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="allureServe" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>false</ForceTestExec>
-      <method v="2" />
-    </configuration>
-    <configuration name="RealEstateTest.clickOnRealEstateCategories" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="RealEstateTest.checkingBusinessCheckbox" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -176,7 +222,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;RealEstateTest.clickOnRealEstateCategories&quot;" />
+            <option value="&quot;RealEstateTest.checkingBusinessCheckbox&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -187,7 +233,7 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="RealEstateTest.clickOnRealEstateTypes" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="RealEstateTest.checkingTheFilterByPriceInTheRealEstateSection" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -200,31 +246,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;RealEstateTest.clickOnRealEstateTypes&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>true</ForceTestExec>
-      <method v="2" />
-    </configuration>
-    <configuration name="RealEstateTest.goToTheRealEstateCategory" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;RealEstateTest.goToTheRealEstateCategory&quot;" />
+            <option value="&quot;RealEstateTest.checkingTheFilterByPriceInTheRealEstateSection&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -236,19 +258,19 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Gradle.BulletinBoardTest.checkingTheAllCategoriesDropdownMenu" />
+      <item itemvalue="Gradle.BulletinBoardTest.checkingTheDropDownListOfAdsInTheSearchBar" />
+      <item itemvalue="Gradle.RealEstateTest.checkingBusinessCheckbox" />
+      <item itemvalue="Gradle.RealEstateTest.checkingTheFilterByPriceInTheRealEstateSection" />
       <item itemvalue="Gradle.BulletinBoardTest.expectedCategoriesList" />
-      <item itemvalue="Gradle.EdcSale [allureServe]" />
-      <item itemvalue="Gradle.RealEstateTest.clickOnRealEstateCategories" />
-      <item itemvalue="Gradle.RealEstateTest.clickOnRealEstateTypes" />
-      <item itemvalue="Gradle.RealEstateTest.goToTheRealEstateCategory" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.RealEstateTest.checkingBusinessCheckbox" />
+        <item itemvalue="Gradle.RealEstateTest.checkingTheFilterByPriceInTheRealEstateSection" />
+        <item itemvalue="Gradle.BulletinBoardTest.checkingTheDropDownListOfAdsInTheSearchBar" />
+        <item itemvalue="Gradle.BulletinBoardTest.checkingTheAllCategoriesDropdownMenu" />
         <item itemvalue="Gradle.BulletinBoardTest.expectedCategoriesList" />
-        <item itemvalue="Gradle.RealEstateTest.clickOnRealEstateTypes" />
-        <item itemvalue="Gradle.RealEstateTest.clickOnRealEstateCategories" />
-        <item itemvalue="Gradle.RealEstateTest.goToTheRealEstateCategory" />
-        <item itemvalue="Gradle.EdcSale [allureServe]" />
       </list>
     </recent_temporary>
   </component>
@@ -261,6 +283,7 @@
       <option name="presentableId" value="Default" />
       <updated>1704288320706</updated>
       <workItem from="1704288321753" duration="148332000" />
+      <workItem from="1705863364676" duration="121515000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -302,7 +325,23 @@
       <option name="project" value="LOCAL" />
       <updated>1705335655022</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="fix">
+      <option name="closed" value="true" />
+      <created>1705870548846</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1705870548846</updated>
+    </task>
+    <task id="LOCAL-00007" summary="2 test cases made">
+      <option name="closed" value="true" />
+      <created>1706050717709</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1706050717709</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -337,18 +376,39 @@
     <MESSAGE value="add some pages, services, tests" />
     <MESSAGE value="add allure" />
     <MESSAGE value="add check by url test" />
-    <option name="LAST_COMMIT_MESSAGE" value="add check by url test" />
+    <MESSAGE value="fix" />
+    <MESSAGE value="2 test cases made" />
+    <option name="LAST_COMMIT_MESSAGE" value="2 test cases made" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.util.NoSuchElementException" package="java.util" />
+          <option name="timeStamp" value="47" />
+        </breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/elements/impl/EdcCheckBox.java</url>
+          <line>25</line>
+          <properties class="elements.impl.EdcCheckBox" method="isSelectedFilter">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="94" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
+        <PinnedItemInfo parentTag="elements.impl.EdcLink" memberName="element" />
         <PinnedItemInfo parentTag="service.RealEstateService" memberName="logger" />
       </pinned-members>
     </pin-to-top-manager>
     <watches-manager>
       <configuration name="GradleRunConfiguration">
+        <watch expression="blockPriceFilter" language="JAVA" />
         <watch expression="((ChromeDriver)driver).devTools" custom="org.openqa.selenium.chrome.ChromeDriver" />
       </configuration>
     </watches-manager>

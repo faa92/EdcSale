@@ -5,13 +5,11 @@ import elements.PageBlock;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-public class EdcDropDown extends PageBlock implements IDropDown {
+public class EdcDropDownRealEstateSortForPrice extends PageBlock implements IDropDown {
     private final By dropDownElements = By.xpath("//a[@class='dropdown-item j-f-sort']");
 
-    private final WebElement element;
-
-    public EdcDropDown(WebElement element) {
-        this.element = element;
+    public EdcDropDownRealEstateSortForPrice(WebElement element) {
+        super(element);
     }
 
     @Override
