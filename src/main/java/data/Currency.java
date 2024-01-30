@@ -12,10 +12,10 @@ public enum Currency {
         this.currencyValue = currencyValue;
     }
 
-    @Override
-    public String toString() {
-        return name();
-    }
+//    @Override
+//    public String toString() {
+//        return name();
+//    }
 
     public String getCurrencyValue() {
         return currencyValue;

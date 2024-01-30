@@ -4,10 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3529428e-2f45-4ab0-bfe8-cdda7fc256ae" name="Changes" comment="add DataProvider">
+    <list default="true" id="3529428e-2f45-4ab0-bfe8-cdda7fc256ae" name="Changes" comment="fix Currency&#10;add org.openqa.selenium.support.ui.Select">
+      <change afterPath="$PROJECT_DIR$/src/main/java/data/DataRealEstatePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/elements/impl/EdcPrice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pages/realEstate/elements/BlockListAdsRealEstate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pages/realEstate/elements/BlockShortAd.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pages/realEstate/elements/BlockSortAds.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/data/Currency.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/Currency.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/realEstate/elements/BlockPriceFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/realEstate/elements/BlockPriceFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/elements/impl/EdcDropDownRealEstateSortForPrice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/elements/impl/EdcDropDownRealEstateSortAds.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/realEstate/RealEstatePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/realEstate/RealEstatePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/service/RealEstateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/RealEstateService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/RealEstateTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/RealEstateTest.java" afterDir="false" />
     </list>
@@ -55,8 +61,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -104,30 +110,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Gradle.RealEstateTest.checkingTheFilterByPriceInTheRealEstateSection">
-    <configuration name="BulletinBoardTest.checkingTheDropDownListOfAdsInTheSearchBar" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;BulletinBoardTest.checkingTheDropDownListOfAdsInTheSearchBar&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>true</ForceTestExec>
-      <method v="2" />
-    </configuration>
     <configuration name="BulletinBoardTest.data" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -224,20 +206,44 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
+    <configuration name="RealEstateTest.wefwfef" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;RealEstateTest.wefwfef&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>true</ForceTestExec>
+      <method v="2" />
+    </configuration>
     <list>
-      <item itemvalue="Gradle.BulletinBoardTest.checkingTheDropDownListOfAdsInTheSearchBar" />
       <item itemvalue="Gradle.BulletinBoardTest.data" />
       <item itemvalue="Gradle.RealEstateTest.checkingBusinessCheckbox" />
       <item itemvalue="Gradle.RealEstateTest.checkingTheFilterByPriceInTheRealEstateSection" />
       <item itemvalue="Gradle.RealEstateTest.qdwqd" />
+      <item itemvalue="Gradle.RealEstateTest.wefwfef" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.RealEstateTest.checkingTheFilterByPriceInTheRealEstateSection" />
+        <item itemvalue="Gradle.RealEstateTest.wefwfef" />
         <item itemvalue="Gradle.RealEstateTest.qdwqd" />
         <item itemvalue="Gradle.BulletinBoardTest.data" />
         <item itemvalue="Gradle.RealEstateTest.checkingBusinessCheckbox" />
-        <item itemvalue="Gradle.BulletinBoardTest.checkingTheDropDownListOfAdsInTheSearchBar" />
       </list>
     </recent_temporary>
   </component>
@@ -250,7 +256,7 @@
       <option name="presentableId" value="Default" />
       <updated>1704288320706</updated>
       <workItem from="1704288321753" duration="148332000" />
-      <workItem from="1705863364676" duration="132659000" />
+      <workItem from="1705863364676" duration="154353000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -324,7 +330,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706562005631</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="fix Currency&#10;add org.openqa.selenium.support.ui.Select">
+      <option name="closed" value="true" />
+      <created>1706568504142</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1706568504142</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -362,7 +376,8 @@
     <MESSAGE value="2 test cases made" />
     <MESSAGE value="fix" />
     <MESSAGE value="add DataProvider" />
-    <option name="LAST_COMMIT_MESSAGE" value="add DataProvider" />
+    <MESSAGE value="fix Currency&#10;add org.openqa.selenium.support.ui.Select" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix Currency&#10;add org.openqa.selenium.support.ui.Select" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>

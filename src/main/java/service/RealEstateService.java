@@ -1,8 +1,11 @@
 package service;
 
 import data.Currency;
+import data.DataRealEstatePage;
 import data.FiltersSearchPanel;
 import pages.realEstate.RealEstatePage;
+
+import java.math.BigDecimal;
 
 public class RealEstateService extends BaseService {
     private final RealEstatePage realEstatePage;
@@ -55,6 +58,33 @@ public class RealEstateService extends BaseService {
         setCurrency(currency);
         logger.info("Filter apply");
         applyFilter();
+    }
+
+    private boolean isCheckedHeader() {
+        if (realEstatePage.getHeader().isDisplayed()) {
+            return realEstatePage.getHeader().getText().contains(DataRealEstatePage.HEADER.getValue());
+        } else return false;
+    }
+
+    private boolean isCheckedCountAds() {
+        return realEstatePage.getSortAds().getCountAds().isDisplayed();
+    }
+
+    private boolean isCheckedFilterPriceListAdsRealEstate(BigDecimal priceFrom, BigDecimal priceTo) {
+        return realEstatePage
+                .getListAds()
+                .getAds()
+                .stream()
+                .allMatch(ad -> ad.getEdcPrice().getPrice().compareTo(priceFrom) >= 0 && ad.getEdcPrice().getPrice().compareTo(priceTo) <= 0);
+    }
+
+    public boolean isCheckedAllParamPriceFilter(DataRealEstatePage priceFrom, DataRealEstatePage priceTo) {
+        BigDecimal pf = new BigDecimal(priceFrom.getValue());
+        BigDecimal pt = new BigDecimal(priceTo.getValue());
+        logger.info("Checked header");
+        logger.info("Checked count ads");
+        logger.info("Checked list ads price range");
+        return isCheckedHeader() && isCheckedCountAds() && isCheckedFilterPriceListAdsRealEstate(pf, pt);
     }
 
 

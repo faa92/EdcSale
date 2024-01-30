@@ -1,5 +1,6 @@
 import data.Categories;
 import data.Currency;
+import data.DataRealEstatePage;
 import data.FiltersSearchPanel;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
@@ -20,13 +21,14 @@ public class RealEstateTest extends BaseTest {
         Assert.assertTrue(realEstateService.isPhotoChecked());       //todo
     }
 
-    @Test(description = "Проверка фильтра по цене в разделе «Недвижимость»")  //todo
+    @Test(description = "Проверка фильтра по цене в разделе «Недвижимость»")
     public void checkingTheFilterByPriceInTheRealEstateSection() {
         boardService.selectMainCategory(Categories.REAL_ESTATE);
-        realEstateService.filterByPrice(1000, 2000, Currency.MDL);
+        realEstateService.filterByPrice(1000, 2000, Currency.BYN);
+        Assert.assertTrue(realEstateService.isCheckedAllParamPriceFilter(DataRealEstatePage.PRICE_FROM, DataRealEstatePage.PRICE_TO));
+
+
     }
-
-
 }
 
 

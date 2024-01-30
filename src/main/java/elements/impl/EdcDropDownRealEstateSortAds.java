@@ -5,10 +5,16 @@ import elements.PageBlock;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-public class EdcDropDownRealEstateSortForPrice extends PageBlock implements IDropDown {
+import java.util.List;
+
+public class EdcDropDownRealEstateSortAds extends PageBlock implements IDropDown {
     private final By dropDownElements = By.xpath("//a[@class='dropdown-item j-f-sort']");
 
-    public EdcDropDownRealEstateSortForPrice(WebElement element) {
+    public List<EdcButton> getDropDownSortElements() {
+        return driver.findElements(dropDownElements).stream().map(EdcButton::new).toList();
+    }
+
+    public EdcDropDownRealEstateSortAds(WebElement element) {
         super(element);
     }
 
