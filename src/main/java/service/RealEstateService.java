@@ -3,6 +3,7 @@ package service;
 import data.Currency;
 import data.DataRealEstatePage;
 import data.FiltersSearchPanel;
+import data.Price;
 import pages.realEstate.RealEstatePage;
 
 import java.math.BigDecimal;
@@ -14,29 +15,50 @@ public class RealEstateService extends BaseService {
         this.realEstatePage = new RealEstatePage();
     }
 
-    public void selectFilter(FiltersSearchPanel filters) {
-        logger.info(" select filter search panel");
+    public boolean filtersSelectionAndTesting(FiltersSearchPanel filters) {
         switch (filters) {
-            case WITH_PHOTO -> realEstatePage.getSearchPanel().getPhotoCheckBox().clickCheckBox();
+            case WITH_PHOTO -> {
+                realEstatePage.getSearchPanel().getCheckboxFilters().getPhotoCheckBox().clickCheckBox();
+                logger.info("Select filter with photo");
+                return isPhotoChecked();
+            }
 
-            case WITHOUT_INTERMEDIARIES ->
-                    realEstatePage.getSearchPanel().getWithOutIntermediariesCheckBox().clickCheckBox();
+            case WITHOUT_INTERMEDIARIES -> {
+                realEstatePage.getSearchPanel().getCheckboxFilters().getWithOutIntermediariesCheckBox().clickCheckBox();
+                logger.info("Select filter without intermediaries");
+                return isWithoutIntermediariesChecked();
+            }
 
-            case BUSINESS_ADS_ONLY -> realEstatePage.getSearchPanel().getBusinessAdsOnlyCheckBox().clickCheckBox();
+            case BUSINESS_ADS_ONLY -> {
+                realEstatePage.getSearchPanel().getCheckboxFilters().getBusinessAdsOnlyCheckBox().clickCheckBox();
+                logger.info("Select filter business ads only");
+                return isBusinessAdsOnlyChecked();
+            }
         }
+        return false;
+    }
+
+    private boolean isBusinessAdsOnlyChecked() {
+        logger.info("Filter selection check business ads only");
+        return realEstatePage.getSearchPanel().getCheckboxFilters().getBusinessAdsOnlyCheckBox().isSelectedFilter();
+    }
+
+    private boolean isWithoutIntermediariesChecked() {
+        logger.info("Filter selection check without intermediaries");
+        return realEstatePage.getSearchPanel().getCheckboxFilters().getWithOutIntermediariesCheckBox().isSelectedFilter();
     }
 
 
-    public boolean isPhotoChecked() {
-        logger.info("filter selection check");
-        return realEstatePage.getSearchPanel().getPhotoCheckBox().isSelectedFilter();
+    private boolean isPhotoChecked() {
+        logger.info("Filter selection check with photo");
+        return realEstatePage.getSearchPanel().getCheckboxFilters().getPhotoCheckBox().isSelectedFilter();
     }
 
     private void clickTheFilterPrice() {
         realEstatePage.getSearchPanel().getBlockPriceFilter().expand();
     }
 
-    private void enterValuesForTheFilter(int priceFrom, int priceTo) {
+    private void enterValuesForTheFilter(Price priceFrom, Price priceTo) {
         realEstatePage.getSearchPanel().getBlockPriceFilter().enterPriceFrom(priceFrom);
         realEstatePage.getSearchPanel().getBlockPriceFilter().enterPriceTo(priceTo);
     }
@@ -49,20 +71,29 @@ public class RealEstateService extends BaseService {
         realEstatePage.getSearchPanel().getBlockPriceFilter().getButtonApply().clickButton();
     }
 
-    public void filterByPrice(int priceFrom, int priceTo, Currency currency) {
+    public void filterByPrice(Price priceFrom, Price priceTo, Currency currency) {
         logger.info("Enter value by price filter");
         clickTheFilterPrice();
         logger.info("Enter price from: " + priceFrom + " Enter price to: " + priceTo);
         enterValuesForTheFilter(priceFrom, priceTo);
-        logger.info("Set currency: " + currency);
+        logger.info("Set currency: " + currency.name());
         setCurrency(currency);
         logger.info("Filter apply");
         applyFilter();
     }
 
+    public boolean isCheckedAllParamPriceFilter(Price priceFrom, Price priceTo) {
+        BigDecimal pf = new BigDecimal(priceFrom.toString());
+        BigDecimal pt = new BigDecimal(priceTo.toString());
+        logger.info("Checked header");
+        logger.info("Checked count ads");
+        logger.info("Checked list ads price range");
+        return isCheckedHeader() && isCheckedCountAds() && isCheckedFilterPriceListAdsRealEstate(pf, pt);
+    }
+
     private boolean isCheckedHeader() {
         if (realEstatePage.getHeader().isDisplayed()) {
-            return realEstatePage.getHeader().getText().contains(DataRealEstatePage.HEADER.getValue());
+            return realEstatePage.getHeader().getText().contains(DataRealEstatePage.HEADER.toString());
         } else return false;
     }
 
@@ -78,14 +109,6 @@ public class RealEstateService extends BaseService {
                 .allMatch(ad -> ad.getEdcPrice().getPrice().compareTo(priceFrom) >= 0 && ad.getEdcPrice().getPrice().compareTo(priceTo) <= 0);
     }
 
-    public boolean isCheckedAllParamPriceFilter(DataRealEstatePage priceFrom, DataRealEstatePage priceTo) {
-        BigDecimal pf = new BigDecimal(priceFrom.getValue());
-        BigDecimal pt = new BigDecimal(priceTo.getValue());
-        logger.info("Checked header");
-        logger.info("Checked count ads");
-        logger.info("Checked list ads price range");
-        return isCheckedHeader() && isCheckedCountAds() && isCheckedFilterPriceListAdsRealEstate(pf, pt);
-    }
 
 
 }

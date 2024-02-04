@@ -1,6 +1,7 @@
 package pages.realEstate.elements;
 
 import data.Currency;
+import data.Price;
 import elements.IDropDown;
 import elements.PageBlock;
 import elements.impl.EdcButton;
@@ -22,17 +23,17 @@ public class BlockPriceFilter extends PageBlock implements IDropDown {
     public void setCurrencySelection(Currency currency) {
         WebElement selectCurrency = driver.findElement(elementsCurrencySelection);
         Select select = new Select(selectCurrency);
-        select.selectByValue(currency.getCurrencyValue());
+        select.selectByValue(currency.toString());
 
     }
 
-    public void enterPriceFrom(Integer priceFrom) {
+    public void enterPriceFrom(Price priceFrom) {
         WebElement webElement = driver.findElement(this.priceFrom);
         webElement.click();
         webElement.sendKeys(priceFrom.toString());
     }
 
-    public void enterPriceTo(Integer priceTo) {
+    public void enterPriceTo(Price priceTo) {
         WebElement webElement = driver.findElement(this.priceTo);
         webElement.click();
         webElement.sendKeys(priceTo.toString());

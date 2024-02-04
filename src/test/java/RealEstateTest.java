@@ -1,12 +1,13 @@
 import data.Categories;
 import data.Currency;
-import data.DataRealEstatePage;
 import data.FiltersSearchPanel;
+import data.Price;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import service.BulletinBoardService;
 import service.RealEstateService;
+import util.MyDataProvider;
 import util.MyTestListener;
 
 @Listeners(MyTestListener.class)
@@ -14,21 +15,19 @@ public class RealEstateTest extends BaseTest {
     BulletinBoardService boardService = new BulletinBoardService();
     RealEstateService realEstateService = new RealEstateService();
 
-    @Test(description = "Проверка чек-бокса «Только бизнес объявления»")
-    public void checkingBusinessCheckbox() {
+    @Test(description = "Проверка чек-бокс фильтров", dataProvider = "filters", dataProviderClass = MyDataProvider.class)
+    public void checkingAllCheckbox(FiltersSearchPanel filter) {
         boardService.selectMainCategory(Categories.REAL_ESTATE);
-        realEstateService.selectFilter(FiltersSearchPanel.WITH_PHOTO);
-        Assert.assertTrue(realEstateService.isPhotoChecked());       //todo
+        Assert.assertTrue(realEstateService.filtersSelectionAndTesting(filter));
     }
 
-    @Test(description = "Проверка фильтра по цене в разделе «Недвижимость»")
-    public void checkingTheFilterByPriceInTheRealEstateSection() {
+    @Test(description = "Проверка фильтра по цене в разделе «Недвижимость»", dataProvider = "currency", dataProviderClass = MyDataProvider.class)
+    public void checkingTheFilterByPriceInTheRealEstateSection(Currency currency) {
         boardService.selectMainCategory(Categories.REAL_ESTATE);
-        realEstateService.filterByPrice(1000, 2000, Currency.BYN);
-        Assert.assertTrue(realEstateService.isCheckedAllParamPriceFilter(DataRealEstatePage.PRICE_FROM, DataRealEstatePage.PRICE_TO));
-
-
+        realEstateService.filterByPrice(Price.PRICE_FROM, Price.PRICE_TO, currency);
+        Assert.assertTrue(realEstateService.isCheckedAllParamPriceFilter(Price.PRICE_FROM, Price.PRICE_TO));
     }
+
 }
 
 

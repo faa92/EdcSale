@@ -1,9 +1,11 @@
-import data.Categories;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import service.BelarusAdsService;
 import service.BulletinBoardService;
+import util.MyTestListener;
 
+@Listeners(MyTestListener.class)
 public class BelarusAdsTest extends BaseTest {
 
     BelarusAdsService belarusAdsService = new BelarusAdsService();
@@ -12,8 +14,6 @@ public class BelarusAdsTest extends BaseTest {
     @Test(description = "Проверка кнопки поиска без ввода запроса")
     public void TestingTheSearchButtonWithoutEnteringQuery() {
         bulletinBoardService.clickTheSearchButton();
-        Assert.assertTrue(belarusAdsService.isDisplayedHeader());
-        Assert.assertTrue(belarusAdsService.IsDisplayListCategories());
-        Assert.assertTrue(belarusAdsService.isCategoryCorrect(Categories.values()));
+        Assert.assertTrue(belarusAdsService.isCheckHeaderAndCategories());
     }
 }

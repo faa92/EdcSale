@@ -18,21 +18,16 @@ public class BulletinBoardTest extends BaseTest {
     @Test(description = "Проверка выпадающего меню  «Все категории»")
     public void checkingTheAllCategoriesDropdownMenu() {
         bulletinBoardService.extendDropdownMenuAllCategories();
-        Assert.assertTrue(bulletinBoardService.isPresentMenu());
-        Assert.assertTrue(bulletinBoardService.isCorrectLoadedAllElementsMenu());
+        Assert.assertTrue(bulletinBoardService.isCheckedDropDownMenuAndAllElements());
     }
 
     @Test(description = "Проверка выпадающего списка объявлений в строке поиска после ввода запроса")
     public void checkingTheDropDownListOfAdsInTheSearchBar() {
-        int expectedValue = 5;
-        bulletinBoardService.enterRequest("Автомобиль BMW");
+        int expectedValue = 5; //todo
+        bulletinBoardService.enterRequest("Автомобиль BMW");              //todo каждый раз сохдавать Енам с одним значением? или свалка в одном енаме?
         Assert.assertTrue(bulletinBoardService.waitDisplayedAdsBlock());
         Assert.assertEquals(bulletinBoardService.countAds(), expectedValue);
-        Assert.assertTrue(bulletinBoardService.isMatchesTheRequest("BMW"));
+        Assert.assertTrue(bulletinBoardService.isMatchesTheRequest("BMW")); //todo
     }
-
-
-
-
 
 }

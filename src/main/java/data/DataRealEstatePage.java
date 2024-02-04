@@ -1,17 +1,15 @@
 package data;
 
 public enum DataRealEstatePage {
-    HEADER("Недвижимость в Беларуси"),
-    PRICE_FROM("1000"),
-    PRICE_TO("2000");
+    HEADER("Недвижимость в Беларуси");
     private String value;
 
     DataRealEstatePage(String value) {
         this.value = value;
     }
 
-    public String getValue() {
+    @Override
+    public String toString() {
         return value;
     }
-
 }

@@ -21,7 +21,7 @@ public class BulletinBoardService extends BaseService {
         board.getMainBlock()
                 .getListCategoriesMainBlock()
                 .stream()
-                .filter(element -> element.getText().equals(category.getDisplayName()))
+                .filter(element -> element.getText().equals(category.toString()))
                 .findFirst()
                 .orElseThrow()
                 .click();
@@ -48,40 +48,44 @@ public class BulletinBoardService extends BaseService {
         } else throw new RuntimeException("Not extend dropdown menu");
     }
 
-    public boolean isPresentMenu() {
-        logger.info("is the dropdown menu open?");
+    private boolean isPresentMenu() {
+        logger.info("Checked dropdown menu");
         if (board.getSearchPanel().getDropDownMenuMainCategories().isExpanded()) {
             return board.getSearchPanel().getDropDownMenuMainCategories().isDisplayed();
         }
         return false;
     }
 
-    public boolean isCorrectLoadedAllElementsMenu() {
-        logger.info("Are all menu items loading correctly?");
+    private boolean isCorrectLoadedAllElementsMenu() {
+        logger.info("Checked all menu items loading correctly");
         return board.getSearchPanel().getDropDownMenuMainCategories().getHeaderAllAds().isDisplayed()
                 && board.getSearchPanel().getDropDownMenuMainCategories().getAdCounter().isDisplayed()
                 && board.getSearchPanel().getDropDownMenuMainCategories().getSeeAllAds().isDisplayed()
                 && board.getSearchPanel().getDropDownMenuMainCategories().getListCategories().stream().allMatch(EdcLink::isDisplayed);
     }
 
+    public boolean isCheckedDropDownMenuAndAllElements() {
+        return isPresentMenu() && isCorrectLoadedAllElementsMenu();
+    }
+
     public void enterRequest(String value) {
-        logger.info("enter a query into the search bar");
+        logger.info("Enter a query into the search bar");
         board.getSearchPanel().getSearchField().sendText(value);
     }
 
     public boolean waitDisplayedAdsBlock() {
-        logger.info("waiting for ad dropdown list");
+        logger.info("Waiting for ad dropdown list");
         return wait.until((driver) -> board.getDropDownListAds().isDisplayed());
     }
 
 
     public int countAds() {
-        logger.info("getting the ad list size");
+        logger.info("Getting the ad list size");
         return board.getDropDownListAds().getListAds().size();
     }
 
     public boolean isMatchesTheRequest(String value) {
-        logger.info("correspondence between the request and the list of advertisements");
+        logger.info("Correspondence between the request and the list of advertisements");
         return board.getDropDownListAds()
                 .getListAds()
                 .stream()
@@ -89,7 +93,7 @@ public class BulletinBoardService extends BaseService {
     }
 
     public void clickTheSearchButton() {
-        logger.info("click the search button");
+        logger.info("Click the search button");
         board.getSearchPanel().getButtonSubmit().clickButton();
     }
 

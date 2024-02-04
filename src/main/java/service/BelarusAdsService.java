@@ -16,12 +16,12 @@ public class BelarusAdsService extends BaseService {
         this.belarusAdsPage = new BelarusAdsPage();
     }
 
-    public boolean isDisplayedHeader() {
+    private boolean isDisplayedHeader() {
         logger.info("is displayed header");
         return belarusAdsPage.getTitle().isDisplayed();
     }
 
-    public boolean isCategoryCorrect(Categories[] expectedValues) {
+    private boolean isCategoryCorrect(Categories[] expectedValues) {
         logger.info("checking main categories");
         List<String> actualValue = belarusAdsPage.getListMainCategories().stream().map(EdcLink::getText).toList();
         List<String> expected = Arrays.stream(expectedValues).map(Categories::toString).toList();
@@ -29,8 +29,12 @@ public class BelarusAdsService extends BaseService {
     }
 
 
-    public boolean IsDisplayListCategories() {
+    private boolean isDisplayListCategories() {
         logger.info("is the list of categories displayed");
         return belarusAdsPage.getListMainCategories().stream().allMatch(EdcLink::isDisplayed);
+    }
+
+    public boolean isCheckHeaderAndCategories() {
+        return isDisplayedHeader() && isDisplayListCategories() && isCategoryCorrect(Categories.values());
     }
 }

@@ -6,19 +6,16 @@ public enum Currency {
     UAH("1"),
     KZT("5"),
     MDL("6");
-    private String currencyValue;
+    private String value;
 
-    Currency(String currencyValue) {
-        this.currencyValue = currencyValue;
+    Currency(String value) {
+        this.value = value;
     }
 
-//    @Override
-//    public String toString() {
-//        return name();
-//    }
-
-    public String getCurrencyValue() {
-        return currencyValue;
+    @Override
+    public String toString() {
+        return value;
     }
+
 
 }

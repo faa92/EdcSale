@@ -28,9 +28,11 @@ dependencies {
     testImplementation("io.qameta.allure:allure-commandline:2.22.2")
     testImplementation("org.aspectj:aspectjweaver:1.9.21")
 
-
 }
+
 
 tasks.test {
     useTestNG()
 }
+
+

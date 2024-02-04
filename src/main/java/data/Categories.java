@@ -15,9 +15,6 @@ public enum Categories {
     JOB("Работа"),
     HOBBY_MUSIC_ART("Хобби, музыка, искусство");
 
-    public String getDisplayName() {
-        return displayName;
-    }
 
     private String displayName;
 
