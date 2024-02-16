@@ -22,9 +22,22 @@ public class MyDataProvider {
         return FiltersSearchPanel.values();
     }
 
-//    @DataProvider(name = "priceFrom")                           todo как добавлять в параметры теста несколько датапровайдеров?
-//    public static Object[] testDataPriceFrom() {
-//        return Price.values();
+//    @DataProvider(name = "priceAndCurrency")  //todo
+//    public static Object[][] testDataPriceFromAndCurrency() {
+//        return Price.values(), Currency.values();
+//    }
+
+//    @DataProvider(name = "priceAndCurrency")  //todo
+//    public static Object[][] testDataPriceFromAndCurrency1() {
+//        Price[] prices = Price.values();
+//        Currency[] currencies = Currency.values();
+//        Object[][] data = new Object[prices.length][2];
+//
+//        for (int i = 0; i < prices.length; i++) {
+//            data[i][0] = prices[i];
+//            data[i][1] = currencies[i];
+//        }
+//        return data;
 //    }
 
 

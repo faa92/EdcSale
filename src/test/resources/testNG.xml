@@ -4,11 +4,11 @@
     <listeners>
         <listener class-name="util.MyTestListener"/>
     </listeners>
-    <test name="Listeners_program">
-        <classes>
-            <class name="util.MyTestListener">
-            </class>
-        </classes>
+    <test name="Gradle - Selenium with TestNG Tests">
+        <!--        <classes>-->
+        <!--            <class name="util.MyTestListener">-->
+        <!--            </class>-->
+        <!--        </classes>-->
     </test>
 </suite>
         <!-- Suite -->

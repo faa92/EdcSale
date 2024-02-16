@@ -12,8 +12,8 @@ public class RealEstatePage extends BasePage {
 
     private final By searchPanel = By.xpath("//div[@class = 'fl-search-h fl-search-panel  fl-search-h-list fl-search-panel-bg-color']");
     private final By header = By.xpath(".//h1[@class='category-left-search-title']");
-    private final By sortAds = By.xpath("//div[@class='it-list-sort-in']");
-    private final By listAds = By.xpath("//div[@class='it-view-list']");
+    private final By sortAds = By.xpath(".//div[@class='it-list-sort-in']");
+    private final By listAds = By.xpath(".//div[@class='it-list-top j-fixed-list']");
 
     public BlockListAdsRealEstate getListAds() {
         return new BlockListAdsRealEstate(driver.findElement(listAds));

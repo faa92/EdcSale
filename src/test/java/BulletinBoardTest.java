@@ -24,10 +24,10 @@ public class BulletinBoardTest extends BaseTest {
     @Test(description = "Проверка выпадающего списка объявлений в строке поиска после ввода запроса")
     public void checkingTheDropDownListOfAdsInTheSearchBar() {
         int expectedValue = 5; //todo
-        bulletinBoardService.enterRequest("Автомобиль BMW");              //todo каждый раз сохдавать Енам с одним значением? или свалка в одном енаме?
+        bulletinBoardService.enterRequest("Автомобиль BMW");              //todo каждый раз создавать Енам с одним значением? или свалка в одном енаме?
         Assert.assertTrue(bulletinBoardService.waitDisplayedAdsBlock());
         Assert.assertEquals(bulletinBoardService.countAds(), expectedValue);
-        Assert.assertTrue(bulletinBoardService.isMatchesTheRequest("BMW")); //todo
+        Assert.assertTrue(bulletinBoardService.isMatchesTheRequest("BMW"));
     }
 
 }

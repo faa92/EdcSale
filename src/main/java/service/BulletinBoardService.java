@@ -75,9 +75,8 @@ public class BulletinBoardService extends BaseService {
 
     public boolean waitDisplayedAdsBlock() {
         logger.info("Waiting for ad dropdown list");
-        return wait.until((driver) -> board.getDropDownListAds().isDisplayed());
+        return waitDisplayedAdsBlock(board.getDropDownListAds());
     }
-
 
     public int countAds() {
         logger.info("Getting the ad list size");

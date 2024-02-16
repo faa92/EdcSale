@@ -2,7 +2,7 @@ package elements;
 
 import org.openqa.selenium.WebElement;
 
-public abstract class PageElement {
+public abstract class PageElement implements IPageElement {
 
     protected final WebElement element;
 
@@ -14,5 +14,8 @@ public abstract class PageElement {
         return element.isDisplayed();
     }
 
-
+    @Override
+    public WebElement getWrappedElement() {
+        return element;
+    }
 }

@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import util.MyDriverManager;
 
-public abstract class PageBlock {
+public abstract class PageBlock implements IPageElement {
     protected final WebDriver driver = MyDriverManager.getDriver();
     protected final WebElement element;
 
@@ -16,5 +16,8 @@ public abstract class PageBlock {
         return element.isDisplayed();
     }
 
-
+    @Override
+    public WebElement getWrappedElement() {
+        return element;
+    }
 }

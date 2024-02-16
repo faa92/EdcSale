@@ -9,7 +9,6 @@ public class EdcLabel extends PageElement implements ILabel {
         super(element);
     }
 
-
     @Override
     public String getText() {
         return element.getText();

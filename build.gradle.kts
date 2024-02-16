@@ -11,9 +11,9 @@ repositories {
 }
 
 dependencies {
-    implementation("org.seleniumhq.selenium:selenium-java:4.15.0")
-    implementation("org.seleniumhq.selenium:selenium-chrome-driver:4.15.0")
-    implementation("org.seleniumhq.selenium:selenium-devtools-v120:4.16.0")
+    implementation("org.seleniumhq.selenium:selenium-java:4.17.0")
+    implementation("org.seleniumhq.selenium:selenium-chrome-driver:4.17.0")
+    implementation("org.seleniumhq.selenium:selenium-devtools-v120:4.17.0")
 
     implementation("org.testng:testng:7.8.0")
 
@@ -27,6 +27,9 @@ dependencies {
     testImplementation("io.qameta.allure:allure-rest-assured:2.22.2")
     testImplementation("io.qameta.allure:allure-commandline:2.22.2")
     testImplementation("org.aspectj:aspectjweaver:1.9.21")
+
+    implementation("org.apache.logging.log4j:log4j-core:2.17.1")    //todo
+
 
 }
 

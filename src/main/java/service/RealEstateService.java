@@ -4,9 +4,13 @@ import data.Currency;
 import data.DataRealEstatePage;
 import data.FiltersSearchPanel;
 import data.Price;
+import models.BlockShortAdModel;
 import pages.realEstate.RealEstatePage;
+import pages.realEstate.elements.BlockShortAd;
 
 import java.math.BigDecimal;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class RealEstateService extends BaseService {
     private final RealEstatePage realEstatePage;
@@ -14,6 +18,26 @@ public class RealEstateService extends BaseService {
     public RealEstateService() {
         this.realEstatePage = new RealEstatePage();
     }
+
+
+    public List<BlockShortAdModel> addToFavorites(List<Integer> numbers) {
+        return numbers.stream().map(this::addFavorite).collect(Collectors.toList());
+    }
+
+    private BlockShortAdModel addFavorite(Integer number) {
+        BlockShortAd ad = realEstatePage.getListAds().getAds().get(number);
+        ad.getAddToFavoritesButton().clickButton();
+        return getBlockShortAdModel(ad);
+    }
+
+    private BlockShortAdModel getBlockShortAdModel(BlockShortAd ad) {
+        return new BlockShortAdModel(ad.getTitleAd().getText(),
+                ad.getDescription().getText(),
+                ad.getEdcPrice().getPrice(),
+                ad.getCity().getText(),
+                ad.getSubtitle().getText());
+    }
+
 
     public boolean filtersSelectionAndTesting(FiltersSearchPanel filters) {
         switch (filters) {
@@ -108,7 +132,6 @@ public class RealEstateService extends BaseService {
                 .stream()
                 .allMatch(ad -> ad.getEdcPrice().getPrice().compareTo(priceFrom) >= 0 && ad.getEdcPrice().getPrice().compareTo(priceTo) <= 0);
     }
-
 
 
 }
