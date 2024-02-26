@@ -28,6 +28,9 @@ dependencies {
     testImplementation("io.qameta.allure:allure-commandline:2.22.2")
     testImplementation("org.aspectj:aspectjweaver:1.9.21")
 
+    compileOnly("org.projectlombok:lombok:1.18.24")
+    annotationProcessor("org.projectlombok:lombok:1.18.24")
+
     implementation("org.apache.logging.log4j:log4j-core:2.17.1")    //todo
 
 

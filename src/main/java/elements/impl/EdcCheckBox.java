@@ -17,8 +17,6 @@ public class EdcCheckBox extends PageBlock implements ICheckBox {
     public void clickCheckBox() {
         JavascriptExecutor executor = (JavascriptExecutor) driver;
         executor.executeScript("arguments[0].click();", element);
-
-//        element.click();
     }
 
     public boolean isSelectedFilter() {

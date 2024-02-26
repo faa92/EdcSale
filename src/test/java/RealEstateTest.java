@@ -1,7 +1,6 @@
 import data.Categories;
 import data.Currency;
 import data.FiltersSearchPanel;
-import data.Price;
 import models.BlockShortAdModel;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
@@ -26,11 +25,11 @@ public class RealEstateTest extends BaseTest {
         Assert.assertTrue(realEstateService.filtersSelectionAndTesting(filter));
     }
 
-    @Test(description = "Проверка фильтра по цене в разделе «Недвижимость»", dataProvider = "currency", dataProviderClass = MyDataProvider.class)
-    public void checkingTheFilterByPriceInTheRealEstateSection(Currency currency, int from, int to) {     // todo
+    @Test(description = "Проверка фильтра по цене в разделе «Недвижимость»", dataProvider = "currencyAndRandomPrice", dataProviderClass = MyDataProvider.class)
+    public void checkingTheFilterByPriceInTheRealEstateSection(Currency currency, int from, int to) {
         boardService.selectMainCategory(Categories.REAL_ESTATE);
-        realEstateService.filterByPrice(Price.PRICE_FROM, Price.PRICE_TO, currency);
-        Assert.assertTrue(realEstateService.isCheckedAllParamPriceFilter(Price.PRICE_FROM, Price.PRICE_TO));
+        realEstateService.filterByPrice(currency, from, to);
+        Assert.assertTrue(realEstateService.isCheckedAllParamPriceFilter(from, to));
     }
 
     @Test(description = "Проверка добавления объявлений в раздел «Избранные»")

@@ -11,10 +11,11 @@ public class BlockListAdsRealEstate extends PageBlock {
         super(element);
     }
 
-    private final By adsList = By.xpath(".//div[@class='j-item it-list-item selected']");
+    private final By adsList = By.xpath(".//div[@class='j-item it-list-item']");
 
+    ////div[@class='j-item it-list-item selected']
     public List<BlockShortAd> getAds() {
-        return driver.findElements(adsList).stream().map(BlockShortAd::new).toList();
+        return element.findElements(adsList).stream().map(BlockShortAd::new).toList();
     }
 
 

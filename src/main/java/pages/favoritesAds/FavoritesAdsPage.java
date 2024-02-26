@@ -11,7 +11,7 @@ public class FavoritesAdsPage extends BasePage {
 
     private final By header = By.xpath("//div[@class='l-page-head']");
     private final By sumFavoritesAds = By.xpath("//span[@class='grey-text ml-1 j-account-favorites-tab-counter']");
-    private final By listFavAds = By.xpath("//div[@class='j-item it-list-item selected']");
+    private final By listFavAds = By.xpath("//div[@class='j-item it-list-item']");
 
 
     public EdcLabel getHeader() {

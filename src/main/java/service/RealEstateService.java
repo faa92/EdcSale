@@ -3,12 +3,10 @@ package service;
 import data.Currency;
 import data.DataRealEstatePage;
 import data.FiltersSearchPanel;
-import data.Price;
 import models.BlockShortAdModel;
 import pages.realEstate.RealEstatePage;
 import pages.realEstate.elements.BlockShortAd;
 
-import java.math.BigDecimal;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -82,7 +80,7 @@ public class RealEstateService extends BaseService {
         realEstatePage.getSearchPanel().getBlockPriceFilter().expand();
     }
 
-    private void enterValuesForTheFilter(Price priceFrom, Price priceTo) {
+    private void enterValuesForTheFilter(Integer priceFrom, Integer priceTo) {
         realEstatePage.getSearchPanel().getBlockPriceFilter().enterPriceFrom(priceFrom);
         realEstatePage.getSearchPanel().getBlockPriceFilter().enterPriceTo(priceTo);
     }
@@ -95,7 +93,7 @@ public class RealEstateService extends BaseService {
         realEstatePage.getSearchPanel().getBlockPriceFilter().getButtonApply().clickButton();
     }
 
-    public void filterByPrice(Price priceFrom, Price priceTo, Currency currency) {
+    public void filterByPrice(Currency currency, Integer priceFrom, Integer priceTo) {
         logger.info("Enter value by price filter");
         clickTheFilterPrice();
         logger.info("Enter price from: " + priceFrom + " Enter price to: " + priceTo);
@@ -106,13 +104,11 @@ public class RealEstateService extends BaseService {
         applyFilter();
     }
 
-    public boolean isCheckedAllParamPriceFilter(Price priceFrom, Price priceTo) {
-        BigDecimal pf = new BigDecimal(priceFrom.toString());
-        BigDecimal pt = new BigDecimal(priceTo.toString());
+    public boolean isCheckedAllParamPriceFilter(Integer priceFrom, Integer priceTo) {
         logger.info("Checked header");
         logger.info("Checked count ads");
         logger.info("Checked list ads price range");
-        return isCheckedHeader() && isCheckedCountAds() && isCheckedFilterPriceListAdsRealEstate(pf, pt);
+        return isCheckedHeader() && isCheckedCountAds() && isCheckedFilterPriceListAdsRealEstate(priceFrom, priceTo);
     }
 
     private boolean isCheckedHeader() {
@@ -125,13 +121,14 @@ public class RealEstateService extends BaseService {
         return realEstatePage.getSortAds().getCountAds().isDisplayed();
     }
 
-    private boolean isCheckedFilterPriceListAdsRealEstate(BigDecimal priceFrom, BigDecimal priceTo) {
+    private boolean isCheckedFilterPriceListAdsRealEstate(Integer priceFrom, Integer priceTo) {
         return realEstatePage
                 .getListAds()
                 .getAds()
                 .stream()
-                .allMatch(ad -> ad.getEdcPrice().getPrice().compareTo(priceFrom) >= 0 && ad.getEdcPrice().getPrice().compareTo(priceTo) <= 0);
+                .allMatch(ad -> {
+                    Integer adPrice = ad.getEdcPrice().getPrice();
+                    return adPrice >= priceFrom && adPrice <= priceTo;
+                });
     }
-
-
 }
