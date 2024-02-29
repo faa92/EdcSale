@@ -2,7 +2,10 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
 import util.MyDriverManager;
+import util.MyPropertyManager;
 import util.MyTestListener;
+
+import static util.MyPropertyManager.PATH_CONFIG;
 
 @Listeners(MyTestListener.class)
 public abstract class BaseTest {
@@ -11,7 +14,8 @@ public abstract class BaseTest {
 
     @BeforeMethod
     public void setUp() {
-        driver.get("https://edc.sale/ru/by/");
+        MyPropertyManager propertyManager = new MyPropertyManager(PATH_CONFIG);
+        driver.get(propertyManager.getProperty("homeUrl"));
     }
 
 //    @AfterTest

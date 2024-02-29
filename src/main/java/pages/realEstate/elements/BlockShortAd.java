@@ -12,7 +12,7 @@ public class BlockShortAd extends PageBlock {
         super(element);
     }
 
-    private final By titleAds = By.xpath(".//div[@class='it-item-title c-shadow-overflow']"); //todo почему приходят все заголовки а не избранные??
+    private final By titleAds = By.xpath(".//div[@class='it-item-title c-shadow-overflow']");
     private final By description = By.xpath(".//div[@class = 'it-list-item-in']//div[@class = 'it-list-item-t']/following-sibling::div");
     private final By price = By.xpath(".//div[@class='it-price-box c-shadow-overflow']");
     private final By city = By.xpath(".//div[@class='it-item-address c-shadow-overflow']");
@@ -30,7 +30,7 @@ public class BlockShortAd extends PageBlock {
         return new EdcLabel(element.findElement(subtitle));
     }
 
-    private final By addToFavoritesButton = By.xpath(".//div[@class='c-item-fav j-tooltip j-i-fav ']");  // all in div
+    private final By addToFavoritesButton = By.xpath(".//div[@class='c-item-fav j-tooltip j-i-fav ']");
 
     //если добавленно в избранное c-item-fav j-tooltip j-i-fav c-block-loader active
 

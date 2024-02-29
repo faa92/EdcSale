@@ -46,7 +46,7 @@ public class MyDataProvider {
     public static Object[][] getCurrencyAndRandomPriceData() {
         Random random = new Random();
         int minPrice = 1000;
-        int maxPrice = 10000;
+        int maxPrice = 100000;
         Currency[] currencies = Currency.values();
 
         Object[][] data = new Object[currencies.length][3];

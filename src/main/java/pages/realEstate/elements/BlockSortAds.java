@@ -2,7 +2,6 @@ package pages.realEstate.elements;
 
 import elements.PageBlock;
 import elements.impl.EdcButton;
-import elements.impl.EdcDropDownRealEstateSortAds;
 import elements.impl.EdcLabel;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -19,24 +18,24 @@ public class BlockSortAds extends PageBlock {
     private final By viewMap = By.xpath(".//*[@data-id='map']");
 
     public EdcButton getViewList() {
-        return new EdcButton(driver.findElement(viewList));
+        return new EdcButton(element.findElement(viewList));
     }
 
     public EdcButton getViewGallery() {
-        return new EdcButton(driver.findElement(viewGallery));
+        return new EdcButton(element.findElement(viewGallery));
     }
 
     public EdcButton getViewMap() {
-        return new EdcButton(driver.findElement(viewMap));
+        return new EdcButton(element.findElement(viewMap));
     }
 
 
-    public EdcDropDownRealEstateSortAds getSortAdsDropDawn() {
-        return new EdcDropDownRealEstateSortAds(driver.findElement(sortAdsDropDawn));
+    public BlockDropDownSortAds getSortAdsDropDawn() {
+        return new BlockDropDownSortAds(element.findElement(sortAdsDropDawn));
     }
 
     public EdcLabel getCountAds() {
-        return new EdcLabel(driver.findElement(countAds));
+        return new EdcLabel(element.findElement(countAds));
     }
 
 

@@ -11,9 +11,9 @@ repositories {
 }
 
 dependencies {
-    implementation("org.seleniumhq.selenium:selenium-java:4.17.0")
-    implementation("org.seleniumhq.selenium:selenium-chrome-driver:4.17.0")
-    implementation("org.seleniumhq.selenium:selenium-devtools-v120:4.17.0")
+    implementation("org.seleniumhq.selenium:selenium-java:4.18.1")
+    implementation("org.seleniumhq.selenium:selenium-chrome-driver:4.18.1")
+    implementation("org.seleniumhq.selenium:selenium-devtools-v120:4.18.1")
 
     implementation("org.testng:testng:7.8.0")
 

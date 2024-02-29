@@ -15,6 +15,10 @@ public class BulletinBoardService extends BaseService {
         this.board = new BulletinBoard();
     }
 
+    public void clickLoginButton() {
+        board.getLoginButton().clickButton();
+    }
+
     public void selectMainCategory(Categories category) {
         logger.info("select category");
         logger.info("Category " + category + " click");
@@ -94,6 +98,25 @@ public class BulletinBoardService extends BaseService {
     public void clickTheSearchButton() {
         logger.info("Click the search button");
         board.getSearchPanel().getButtonSubmit().clickButton();
+    }
+
+
+    public boolean isCheckedUserItems() {
+        logger.info("Check displayed items user drop down menu");
+        board.getTopHeader().getUserDropDown().expand();
+        return board.getTopHeader().getUserDropDown().isDisplayedAllItems();
+    }
+
+    private void expandUserDropDown() {
+        logger.info("Expand user drop down menu");
+        board.getTopHeader().getUserDropDown().expand();
+    }
+
+    public boolean checkItemsUserDropDownByText(String expected) {
+        expandUserDropDown();
+        return board.getTopHeader().getUserDropDown().getDropDownElements()
+                .stream()
+                .anyMatch(EdcLink -> EdcLink.getText().equals(expected));
     }
 
 

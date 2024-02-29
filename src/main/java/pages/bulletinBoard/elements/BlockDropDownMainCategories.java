@@ -2,6 +2,7 @@ package pages.bulletinBoard.elements;
 
 import elements.IDropDown;
 import elements.PageBlock;
+import elements.impl.EdcLabel;
 import elements.impl.EdcLink;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -20,21 +21,21 @@ public class BlockDropDownMainCategories extends PageBlock implements IDropDown 
     }
 
     public EdcLink getSeeAllAds() {
-        return new EdcLink(driver.findElement(seeAllAds));
+        return new EdcLink(element.findElement(seeAllAds));
     }
 
 
-    public WebElement getHeaderAllAds() {
-        return driver.findElement(headerAllAds);
-    }              //???todo
+    public EdcLabel getHeaderAllAds() {
+        return new EdcLabel(element.findElement(headerAllAds));
+    }
 
-    public WebElement getAdCounter() {
-        return driver.findElement(adCounter);
-    }                     //???todo
+    public EdcLabel getAdCounter() {
+        return new EdcLabel(element.findElement(adCounter));
+    }
 
 
     public List<EdcLink> getListCategories() {
-        return driver.findElements(listCategories).stream().map(EdcLink::new).toList();
+        return element.findElements(listCategories).stream().map(EdcLink::new).toList();
     }
 
 
@@ -56,7 +57,7 @@ public class BlockDropDownMainCategories extends PageBlock implements IDropDown 
     @Override
     public void selectValue(String value) {
         expand();
-        driver.findElements(dropDownMenu)
+        element.findElements(dropDownMenu)
                 .stream()
                 .filter(element -> element.getText().equals(value))
                 .findFirst()
@@ -66,6 +67,6 @@ public class BlockDropDownMainCategories extends PageBlock implements IDropDown 
 
     @Override
     public boolean isExpanded() {
-        return driver.findElement(dropDownMenu).getAttribute("style").contains("display: block;");
+        return element.findElement(dropDownMenu).getAttribute("style").contains("display: block;");
     } //display: none; если меню свёрнуто
 }
