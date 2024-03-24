@@ -2,49 +2,41 @@ package service;
 
 import models.UserModel;
 import pages.LoginPage;
-import util.MyPropertyManager;
 
-import static util.MyPropertyManager.PATH_USER_DATA;
+import java.util.List;
 
 public class LoginService extends BaseService {
     private final LoginPage loginPage;
-    MyPropertyManager propertyManager = new MyPropertyManager(PATH_USER_DATA);
-    UserModel userModel = new UserModel(propertyManager.getProperty("email"), propertyManager.getProperty("password"));
-
 
     public LoginService() {
         this.loginPage = new LoginPage();
     }
 
-    public void clickRegister() {
-        logger.info("Click button register");
-        loginPage.getButtonRegister().clickButton();
-    }
-
-    public void loginToTheSite() {
-        userDataInput();
+    public void loginToTheSite(List<UserModel> userModel) {
+        userDataInput(userModel.stream().findFirst().orElseThrow(null));
         clickRememberMe();
         logger.info("Click button login");
         loginPage.getButtonLogin().clickButton();
     }
 
-    public void userDataInput() {      //todo испоользовать в разных сервисах?
+    public void userDataInput(UserModel userModel) {
         logger.info("Input user data");
-        enterEmail();
-        enterPassword();
-    }
-
-    private void enterEmail() {
-        loginPage.getInputEmail().sendText(userModel.getEmail());
-    }
-
-    private void enterPassword() {
-        loginPage.getInputPassword().sendText(userModel.getPassword());
+        enterEmail(userModel.getEmail());
+        enterPassword(userModel.getPassword());
     }
 
     private void clickRememberMe() {
         logger.info("Click remember me checkbox");
         loginPage.getCheckBoxRememberMe().clickCheckBox();
     }
+
+    private void enterEmail(String email) {
+        loginPage.getInputEmail().sendText(email);
+    }
+
+    private void enterPassword(String password) {
+        loginPage.getInputPassword().sendText(password);
+    }
+
 
 }

@@ -4,30 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3529428e-2f45-4ab0-bfe8-cdda7fc256ae" name="Changes" comment="checkingTheFilterByPriceInTheRealEstateSection">
-      <change afterPath="$PROJECT_DIR$/src/main/java/data/Price.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pages/realEstate/elements/BlockCheckboxFilters.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/ META-INF/services/io.qameta.allure.listener.MyTestListener" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/testNG.xml" afterDir="false" />
+    <list default="true" id="3529428e-2f45-4ab0-bfe8-cdda7fc256ae" name="Changes" comment="login/user dropdown">
+      <change afterPath="$PROJECT_DIR$/src/main/java/QWERTY.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/data/Config.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/data/ExpectedValues.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/elements/impl/AbstractDropDown.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/util/CsvReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/util/UserManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data/Categories.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/Categories.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data/Currency.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/Currency.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data/DataRealEstatePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/DataRealEstatePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/data/FiltersSearchPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/FiltersSearchPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data/MyDataProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/MyDataProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/elements/impl/EdcCheckBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/elements/impl/EdcCheckBox.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/realEstate/elements/BlockPriceFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/realEstate/elements/BlockPriceFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/realEstate/elements/RealEstateBlockSearchPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/realEstate/elements/RealEstateBlockSearchPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/BelarusAdsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/BelarusAdsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/elements/PageBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/elements/PageBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/UserModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/UserModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/RegisterPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/bulletinBoard/elements/BlockDropDownMainCategories.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/bulletinBoard/elements/BlockDropDownMainCategories.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/bulletinBoard/elements/BlockDropDownPersonalArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/bulletinBoard/elements/BlockDropDownPersonalArea.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/favoritesAds/FavoritesAdsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/favoritesAds/FavoritesAdsPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/service/BulletinBoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/BulletinBoardService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/RealEstateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/RealEstateService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/LoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/LoginService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/RegisterService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/util/MyDataProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/MyDataProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/util/MyPropertyManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/MyPropertyManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/util/MyTestListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/MyTestListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/userData.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userData.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/BelarusAdsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BelarusAdsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/BulletinBoardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BulletinBoardTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/RealEstateTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/RealEstateTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/allure.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/allure.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/LoginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/RegisterTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/allure.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/log4j.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,9 +79,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="TestNG Test Class" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -87,6 +94,19 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="e61bb13c-54a8-492c-9052-53c39e59f5de" />
+        <option name="url" value="https://github.com/faa92/EdcSale.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -95,24 +115,29 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "feature__test",
-    "last_directory_selection": "/Users/antonfedoseev/IdeaProjects/EdcSale/src/main/java",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.09398496",
-    "project.structure.side.proportion": "0.44",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;TestNG&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.TestNG&quot;: &quot;&quot;,
+    &quot;database.data.extractors.current.export.id&quot;: &quot;Comma-separated (CSV)_id&quot;,
+    &quot;database.data.extractors.current.id&quot;: &quot;Comma-separated (CSV)_id&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature__test&quot;,
+    &quot;last_directory_selection&quot;: &quot;/Users/antonfedoseev/IdeaProjects/EdcSale/src/main/java&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.18066406&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.44&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;cn.yiiguxing.plugin.translate&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="pages.realEstate.elements" />
@@ -121,144 +146,193 @@
       <recent name="pages" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/test/resources" />
+      <recent name="$PROJECT_DIR$/src/main/java" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/test/resources" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="util" />
+    </key>
   </component>
-  <component name="RunManager" selected="Gradle.RealEstateTest.testAuthentication">
-    <configuration name="EdcSale [allureReport]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="TestNG.RealEstateTest.checkingFavoritesAds">
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="allureReport" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>false</ForceTestExec>
-      <method v="2" />
-    </configuration>
-    <configuration name="EdcSale [allureServe]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="allureServe" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>false</ForceTestExec>
-      <method v="2" />
-    </configuration>
-    <configuration name="EdcSale [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>false</ForceTestExec>
-      <method v="2" />
-    </configuration>
-    <configuration name="RealEstateTest.checkingTheFilterByPriceInTheRealEstateSection" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalProjectPath" value="" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;RealEstateTest.checkingTheFilterByPriceInTheRealEstateSection&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>true</ForceTestExec>
-      <method v="2" />
-    </configuration>
-    <configuration name="RealEstateTest.testAuthentication" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
           <list />
         </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;RealEstateTest.testAuthentication&quot;" />
-          </list>
-        </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>true</ForceTestExec>
+      <ForceTestExec>false</ForceTestExec>
       <method v="2" />
+    </configuration>
+    <configuration name="LoginTest.isThereALogoutButton" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="EdcSale.test" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="LoginTest" />
+      <option name="METHOD_NAME" value="isThereALogoutButton" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginTest.login" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="EdcSale.test" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="LoginTest" />
+      <option name="METHOD_NAME" value="login" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RealEstateTest.checkingAllCheckbox" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="EdcSale.test" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="RealEstateTest" />
+      <option name="METHOD_NAME" value="checkingAllCheckbox" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RealEstateTest.checkingFavoritesAds" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="EdcSale.test" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="RealEstateTest" />
+      <option name="METHOD_NAME" value="checkingFavoritesAds" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RealEstateTest.checkingTheFilterByPriceInTheRealEstateSection" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="EdcSale.test" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="RealEstateTest" />
+      <option name="METHOD_NAME" value="checkingTheFilterByPriceInTheRealEstateSection" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <list>
-      <item itemvalue="Gradle.EdcSale [allureReport]" />
-      <item itemvalue="Gradle.EdcSale [test]" />
-      <item itemvalue="Gradle.RealEstateTest.checkingTheFilterByPriceInTheRealEstateSection" />
-      <item itemvalue="Gradle.RealEstateTest.testAuthentication" />
-      <item itemvalue="Gradle.EdcSale [allureServe]" />
+      <item itemvalue="TestNG.RealEstateTest.checkingAllCheckbox" />
+      <item itemvalue="TestNG.RealEstateTest.checkingFavoritesAds" />
+      <item itemvalue="TestNG.RealEstateTest.checkingTheFilterByPriceInTheRealEstateSection" />
+      <item itemvalue="TestNG.LoginTest.isThereALogoutButton" />
+      <item itemvalue="TestNG.LoginTest.login" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.RealEstateTest.testAuthentication" />
-        <item itemvalue="Gradle.RealEstateTest.checkingTheFilterByPriceInTheRealEstateSection" />
-        <item itemvalue="Gradle.EdcSale [allureServe]" />
-        <item itemvalue="Gradle.EdcSale [allureReport]" />
-        <item itemvalue="Gradle.EdcSale [test]" />
+        <item itemvalue="TestNG.RealEstateTest.checkingFavoritesAds" />
+        <item itemvalue="TestNG.RealEstateTest.checkingTheFilterByPriceInTheRealEstateSection" />
+        <item itemvalue="TestNG.RealEstateTest.checkingAllCheckbox" />
+        <item itemvalue="TestNG.LoginTest.isThereALogoutButton" />
+        <item itemvalue="TestNG.LoginTest.login" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SeleniumInternalSettingsState">
+    <option name="lastFrameworkName" value="Selenium" />
+    <option name="lastLanguageId" value="JAVA" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -270,6 +344,11 @@
       <updated>1704288320706</updated>
       <workItem from="1704288321753" duration="148332000" />
       <workItem from="1705863364676" duration="197225000" />
+      <workItem from="1706793403198" duration="178046000" />
+      <workItem from="1710267210478" duration="4065000" />
+      <workItem from="1710273336791" duration="4169000" />
+      <workItem from="1710277553852" duration="1574000" />
+      <workItem from="1710332339238" duration="25280000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -359,7 +438,39 @@
       <option name="project" value="LOCAL" />
       <updated>1706640474115</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="dataProvider + allure reports">
+      <option name="closed" value="true" />
+      <created>1707070788279</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1707070788279</updated>
+    </task>
+    <task id="LOCAL-00013" summary="model&#10;allure&#10;log4j">
+      <option name="closed" value="true" />
+      <created>1708097502022</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1708097502022</updated>
+    </task>
+    <task id="LOCAL-00014" summary="fix">
+      <option name="closed" value="true" />
+      <created>1708941124060</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1708941124060</updated>
+    </task>
+    <task id="LOCAL-00015" summary="login/user dropdown">
+      <option name="closed" value="true" />
+      <created>1709223196323</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1709223196323</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -395,11 +506,14 @@
     <MESSAGE value="add allure" />
     <MESSAGE value="add check by url test" />
     <MESSAGE value="2 test cases made" />
-    <MESSAGE value="fix" />
     <MESSAGE value="add DataProvider" />
     <MESSAGE value="fix Currency&#10;add org.openqa.selenium.support.ui.Select" />
     <MESSAGE value="checkingTheFilterByPriceInTheRealEstateSection" />
-    <option name="LAST_COMMIT_MESSAGE" value="checkingTheFilterByPriceInTheRealEstateSection" />
+    <MESSAGE value="dataProvider + allure reports" />
+    <MESSAGE value="model&#10;allure&#10;log4j" />
+    <MESSAGE value="fix" />
+    <MESSAGE value="login/user dropdown" />
+    <option name="LAST_COMMIT_MESSAGE" value="login/user dropdown" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -410,11 +524,26 @@
           <properties class="java.util.NoSuchElementException" package="java.util" />
           <option name="timeStamp" value="47" />
         </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.io.FileNotFoundException" package="java.io" />
+          <option name="timeStamp" value="95" />
+        </breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/util/CsvReader.java</url>
+          <line>19</line>
+          <properties class="util.CsvReader" method="readFileCsv">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="102" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
+        <PinnedItemInfo parentTag="pages.realEstate.RealEstatePage" memberName="driver" />
         <PinnedItemInfo parentTag="elements.impl.EdcLink" memberName="element" />
+        <PinnedItemInfo parentTag="java.util.stream.ReferencePipeline$3" memberName="mapper" />
         <PinnedItemInfo parentTag="service.RealEstateService" memberName="logger" />
       </pinned-members>
     </pin-to-top-manager>
@@ -422,6 +551,9 @@
       <configuration name="GradleRunConfiguration">
         <watch expression="blockPriceFilter" language="JAVA" />
         <watch expression="((ChromeDriver)driver).devTools" custom="org.openqa.selenium.chrome.ChromeDriver" />
+      </configuration>
+      <configuration name="TestNG">
+        <watch expression="parse.stream().findFirst().get().getPassword()" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>

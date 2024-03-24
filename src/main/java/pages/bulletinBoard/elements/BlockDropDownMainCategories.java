@@ -1,7 +1,7 @@
 package pages.bulletinBoard.elements;
 
 import elements.IDropDown;
-import elements.PageBlock;
+import elements.impl.AbstractDropDown;
 import elements.impl.EdcLabel;
 import elements.impl.EdcLink;
 import org.openqa.selenium.By;
@@ -9,7 +9,7 @@ import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
-public class BlockDropDownMainCategories extends PageBlock implements IDropDown {
+public class BlockDropDownMainCategories extends AbstractDropDown implements IDropDown {
     private final By dropDownMenu = By.xpath("//div[@class='fl-search-cats-dropdown j-mobile-filter-first-step']");
     private final By listCategories = By.xpath(".//li[@class='fl-search-cats-item']");
     private final By headerAllAds = By.xpath(".//div[@class='fl-search-dropdown-title wb-f-panel-title']");
@@ -18,6 +18,11 @@ public class BlockDropDownMainCategories extends PageBlock implements IDropDown 
 
     public BlockDropDownMainCategories(WebElement element) {
         super(element);
+    }
+
+    @Override
+    protected By getDropDownBys() {
+        return listCategories;
     }
 
     public EdcLink getSeeAllAds() {

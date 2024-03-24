@@ -1,27 +1,48 @@
 package util;
 
-import io.qameta.allure.Allure;
-import io.qameta.allure.Attachment;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-import org.testng.ITestListener;
+import io.qameta.allure.testng.AllureTestNg;
+import org.apache.commons.lang3.reflect.FieldUtils;
 import org.testng.ITestResult;
+import org.testng.annotations.Test;
+import org.testng.internal.TestNGMethod;
 
-public class MyTestListener implements ITestListener {
+
+public class MyTestListener extends AllureTestNg {   //todo
+//    @Override
+//    @Attachment(value = "screenshot", type = "image/png")
+//    public void onTestFailure(ITestResult result) {
+//        WebDriver driver = MyDriverManager.getDriver();
+//        try {
+//            Allure.getLifecycle().addAttachment("screenshot", "image/png", ".png"
+//                    , ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES));
+//
+//        } catch (Exception e) {
+//            System.out.println("Failed to take screenshot:  !!!" + e.getMessage());
+//        }
+//    }
+
     @Override
-    @Attachment(value = "screenshot", type = "image/png")
-    public void onTestFailure(ITestResult result) {
-        WebDriver driver = MyDriverManager.getDriver();
-        try {
-            Allure.getLifecycle().addAttachment("screenshot", "image/png", ".png"
-                    , ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES));
+    public void onTestStart(ITestResult testResult) {
+        setMethodNameFromTest(testResult);
+        super.onTestStart(testResult);
+    }
 
-        } catch (Exception e) {
-            System.out.println("Failed to take screenshot:  !!!" + e.getMessage());
-        } finally {
-            driver.quit();
+    private void setMethodNameFromTest(ITestResult testResult) {
+        try {
+            TestNGMethod method = (TestNGMethod) FieldUtils.readField(testResult, "m_method", true);
+            FieldUtils.writeField(method, "m_methodName", getTestName(testResult), true);
+
+        } catch (IllegalAccessException e) {
+            throw new RuntimeException(e);
         }
+    }
+
+    private String getTestName(ITestResult testResult) {
+        Test annotation = testResult.getMethod().getConstructorOrMethod().getMethod().getAnnotation(Test.class);
+        if (annotation != null) {
+            return annotation.description();
+        }
+        return testResult.getMethod().getMethodName();
     }
 }
 

@@ -7,7 +7,11 @@ import pages.realEstate.elements.BlockShortAd;
 
 import java.util.List;
 
+
 public class FavoritesAdsPage extends BasePage {
+
+//    @FindBy(xpath = "//div[@class='l-page-head']")
+//    private WebElement headerF;
 
     private final By header = By.xpath("//div[@class='l-page-head']");
     private final By sumFavoritesAds = By.xpath("//span[@class='grey-text ml-1 j-account-favorites-tab-counter']");

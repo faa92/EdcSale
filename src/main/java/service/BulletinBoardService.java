@@ -2,6 +2,7 @@ package service;
 
 import data.Categories;
 import elements.impl.EdcLink;
+import io.qameta.allure.Allure;
 import pages.bulletinBoard.BulletinBoard;
 
 import java.util.Arrays;
@@ -20,7 +21,7 @@ public class BulletinBoardService extends BaseService {
     }
 
     public void selectMainCategory(Categories category) {
-        logger.info("select category");
+        Allure.step("select category");
         logger.info("Category " + category + " click");
         board.getMainBlock()
                 .getListCategoriesMainBlock()

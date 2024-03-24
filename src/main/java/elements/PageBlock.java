@@ -8,7 +8,7 @@ public abstract class PageBlock implements IPageElement {
     protected final WebDriver driver = MyDriverManager.getDriver();
     protected final WebElement element;
 
-    public PageBlock(WebElement element) {  // todo не все дроп даун
+    public PageBlock(WebElement element) {
         this.element = element;
     }
 

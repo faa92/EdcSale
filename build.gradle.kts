@@ -18,20 +18,15 @@ dependencies {
     implementation("org.testng:testng:7.8.0")
 
     implementation("org.slf4j:slf4j-api:2.0.9")
-    testImplementation("org.slf4j:slf4j-reload4j:2.0.9")
+    implementation("org.slf4j:slf4j-reload4j:2.0.9")
     implementation("org.apache.logging.log4j:log4j-core:2.22.0")
-
-    testImplementation("io.qameta.allure:allure-testng:2.22.2")
-    testImplementation("io.qameta.allure:allure-java-commons:2.22.2")
-    testImplementation("io.qameta.allure:allure-assertj:2.22.2")
-    testImplementation("io.qameta.allure:allure-rest-assured:2.22.2")
-    testImplementation("io.qameta.allure:allure-commandline:2.22.2")
-    testImplementation("org.aspectj:aspectjweaver:1.9.21")
+    implementation("org.apache.logging.log4j:log4j-core:2.17.1")
 
     compileOnly("org.projectlombok:lombok:1.18.24")
     annotationProcessor("org.projectlombok:lombok:1.18.24")
 
-    implementation("org.apache.logging.log4j:log4j-core:2.17.1")    //todo
+    implementation("org.apache.commons:commons-collections4:4.4")
+    implementation(dependencyNotation = "com.opencsv:opencsv:5.7.1")
 
 
 }

@@ -12,12 +12,16 @@ public class MyDataProvider {
 
     @DataProvider(name = "categories")
     public static Object[] testDataCategories() {
-        return Categories.values();
+        return Arrays.stream(Categories.values())
+                .map(filter -> new Object[]{filter})
+                .toArray(Object[][]::new);
     }
 
     @DataProvider(name = "currency")
-    public static Object[] testDataCurrency() {
-        return Currency.values();
+    public static Object[][] testDataCurrency() {
+        return Arrays.stream(Currency.values())
+                .map(filter -> new Object[]{filter})
+                .toArray(Object[][]::new);
     }
 
     @DataProvider(name = "filters")
@@ -26,21 +30,6 @@ public class MyDataProvider {
                 .map(filter -> new Object[]{filter})
                 .toArray(Object[][]::new);
     }
-//    @DataProvider(name = "filters")
-//    public static Object[][] testDataFilters() {
-//        FiltersSearchPanel[] filters = FiltersSearchPanel.values();
-//        Object[][] data = new Object[filters.length][1];
-//
-//        for (int i = 0; i < filters.length; i++) {
-//            data[i][0] = filters[i];
-//        }
-//        return data;
-//    }
-
-//    @DataProvider(name = "filters")
-//    public static Object[] testDataFilters() {
-//        return FiltersSearchPanel.values();
-//    }
 
     @DataProvider(name = "currencyAndRandomPrice")
     public static Object[][] getCurrencyAndRandomPriceData() {
@@ -61,6 +50,5 @@ public class MyDataProvider {
 
         return data;
     }
-
 
 }

@@ -6,9 +6,6 @@ import java.util.Properties;
 
 public class MyPropertyManager {
     private final Properties properties;
-    public static final String PATH_CONFIG = "src/main/resources/config.properties";
-    public static final String PATH_USER_DATA = "src/main/resources/userData.csv";
-
 
     public MyPropertyManager(String pathToFile) {
         properties = new Properties();

@@ -1,13 +1,19 @@
 package models;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
+import com.opencsv.bean.CsvBindByName;
+import lombok.Data;
 
-@Getter
-@Setter
-@AllArgsConstructor
-public class UserModel {
+import java.io.Serializable;
+
+@Data
+public class UserModel implements Serializable {
+    @CsvBindByName(column = "email")
     String email;
+    @CsvBindByName(column = "password")
     String password;
+
+    @Override
+    public String toString() {
+        return "UserModel: " + email + " " + password;
+    }
 }
